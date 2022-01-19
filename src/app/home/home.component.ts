@@ -138,33 +138,9 @@ export class HomeComponent implements OnInit {
     this.service.getSubjectJson().subscribe(res => {
       this.subjectInterface = res;
     });
-    // this.subjectInterface.forEach(e => {
-    //   ul.insertAdjacentHTML("afterend",
-    //     `<li class="list-group-item" sub="${e.Id}">${e.Name}</li>`)
-    // });
-    // const ite = this.ele.nativeElement.querySelectorAll('.list-group-item');
-    // const modal = this.ele.nativeElement.querySelector('.modal-quiz');
-    // const info_box = this.ele.nativeElement.querySelector(".info_box");
-
-    // ite.forEach((item: any) => {
-    //   item.onclick = () => {
-    //     ite.forEach((e: any) => {
-    //       if (e.classList.contains('modal-active')) {
-    //         e.classList.remove('modal-active');
-    //       }
-    //     });
-    //     item.classList.add('modal-active');
-    //     modal.style.display = "flex";
-    //     info_box.classList.add("activeInfo");
-    //     this.subb = item.getAttribute('sub');
-    //     this.getQuiz();
-    //     this.subjectName = item.innerHTML;
-    //   }
-    // });
   }
 
   nextQuiz() {
-    // const next_btn = this.ele.nativeElement.querySelector("footer .next_btn");
     if (this.currentIndex < 9) {
       this.currentIndex++;
       this.posCurQui = this.randomQuiz();
@@ -183,8 +159,7 @@ export class HomeComponent implements OnInit {
   selectAnswer(id: number, tags: any) {
     clearInterval(this.counter); //clear counter
     clearInterval(this.counterLine); //clear counterLine
-    // const option_list = this.ele.nativeElement.querySelector('.option_list');
-    // const next_btn = this.ele.nativeElement.querySelector("footer .next_btn");
+
     let tag;
     let tickIconTag = '<div class="icon tick"><i class="fas fa-check"></i></div>';
     let crossIconTag = '<div class="icon cross"><i class="fas fa-times"></i></div>';
@@ -218,9 +193,6 @@ export class HomeComponent implements OnInit {
     this.next_btn.nativeElement.classList.add("show"); //show the next button if user selected any option
   }
   startTimer(time: number) {
-    // const option_list = this.ele.nativeElement.querySelector('.option_list');
-    // const timeText = this.ele.nativeElement.querySelector(".timer .time_left_txt");
-    // const timeCount = this.ele.nativeElement.querySelector(".timer .timer_sec");
     this.counter = setInterval(() => {
       this.timeCount.nativeElement.textContent = time; //changing the value of timeCount with time value
       time--; //decrement the time value
@@ -231,7 +203,7 @@ export class HomeComponent implements OnInit {
       if (time < 0) { //if timer is less than 0
         clearInterval(this.counter); //clear counter
         this.timeText.nativeElement.textContent = "Time Off"; //change the time text to time off
-        // const next_btn = this.ele.nativeElement.querySelector("footer .next_btn");
+
         let tickIconTag = '<div class="icon tick"><i class="fas fa-check"></i></div>';
         let correctAnswer = this.quizInterface[this.posCurQui].AnswerId; //getting correct answer from array
         const allOptions = this.option_list.nativeElement.children.length; //getting all option items
@@ -262,10 +234,6 @@ export class HomeComponent implements OnInit {
     }
   }
   showResult() {
-    // const info_box = this.ele.nativeElement.querySelector(".info_box");
-    // const quiz_box = this.ele.nativeElement.querySelector(".quiz_box");
-    // const result_box = this.ele.nativeElement.querySelector(".result_box");
-
     this.info_box.nativeElement.classList.remove("activeInfo"); //hide info box
     this.quiz_box.nativeElement.classList.remove("activeQuiz"); //hide quiz box
     this.result_box.nativeElement.classList.add("activeResult"); //show result box
