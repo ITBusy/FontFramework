@@ -1,1 +1,95 @@
 /* You can add global styles to this file, and also import other style files */
+@import url("http://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300ita‌​lic,400italic,500,500italic,700,700italic,900italic,900");
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+/* Pagination */
+.pagination{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8px;
+}
+
+.pagination ul {
+    display: flex;
+    flex-wrap: wrap;
+    background: #909294;
+    padding: 8px;
+    border-radius: 50px;
+    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  .pagination ul li {
+    color: #0f4ce4;
+    list-style: none;
+    line-height: 45px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    user-select: none;
+    transition: all 0.3s ease;
+  }
+  
+  .pagination ul li.numb {
+    list-style: none;
+    height: 45px;
+    width: 45px;
+    margin: 0 3px;
+    line-height: 45px;
+    border-radius: 50%;
+  }
+  
+  .pagination ul li.numb.first {
+    margin: 0px 3px 0 -5px;
+  }
+  
+  .pagination ul li.numb.last {
+    margin: 0px -5px 0 3px;
+  }
+  
+  .pagination ul li.dots {
+    font-size: 22px;
+    cursor: default;
+  }
+  
+  .pagination ul li.btn {
+    padding: 0 20px;
+    border-radius: 50px;
+  }
+  
+  @media (min-width: 768px) {
+  
+    .pagination li.active,
+    .pagination ul li.numb:hover,
+    .pagination li:first-child:hover,
+    .pagination ul li:last-child:hover {
+        color: #fff;
+        background: #0f4ce4;
+    }
+  }
+  
+  @media (max-width: 768px) {
+  
+    .pagination li.active,
+    .pagination li:first-child:hover,
+    .pagination ul li:last-child:hover {
+        color: #fff;
+        background: #0f4ce4;
+    }
+  }
+  .page__current{
+    color: #fff;
+    font-weight: bold;
+    position: absolute;
+    top: 60%;
+  }
