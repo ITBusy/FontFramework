@@ -71,11 +71,8 @@ export class HomeComponent implements OnInit {
     this.startTimer(30); //calling startTimer function
     this.startTimerLine(0); //calling startTimerLine function
   }
-
-  listSubject(event: any) {
+  commomSubject(event: any, name: string) {
     const ite = this.ele.nativeElement.querySelectorAll('.list_group_item');
-    // const modal = this.ele.nativeElement.querySelector('.modal-quiz');
-    // const info_box = this.ele.nativeElement.querySelector(".info_box");
     ite.forEach((e: any) => {
       if (e.classList.contains('modal-active')) {
         e.classList.remove('modal-active');
@@ -86,10 +83,16 @@ export class HomeComponent implements OnInit {
     this.info_box.nativeElement.classList.add("activeInfo");
     this.subb = event.target.getAttribute('sub');
     this.getQuiz();
-    this.subjectName = event.target.innerHTML;
+    this.subjectName = name;
+  }
+  listSubject(event: any) {
+    this.commomSubject(event,event.target.innerHTML);
+  }
+
+  getQuizByProduct(event: any) {
+    this.commomSubject(event, event.target.children[0].children[1].innerHTML);
   }
   getSubject() {
-    const ul = this.ele.nativeElement.querySelector('ul.list-group');
     this.service.getSubjectJson().subscribe(res => {
       this.subjectInterface = res;
     });

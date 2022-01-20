@@ -33,6 +33,7 @@ aside {
   border: 1px solid #ccc;
   margin-bottom: 12px;
   margin-top: 12px;
+  pointer-events: none;
 }
 
 .product__price {
