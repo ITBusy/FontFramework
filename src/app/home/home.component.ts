@@ -1,4 +1,5 @@
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { Router } from '@angular/router';
 import { QuizInterface } from '../interface/quiz.interface';
 import { SubjectInterface } from '../interface/subject.interface';
 import { Service } from '../service/service.service';
@@ -11,13 +12,14 @@ import { Service } from '../service/service.service';
 export class HomeComponent implements OnInit {
   constructor(
     private ele: ElementRef,
-    private service: Service
+    private service: Service,
+    private router : Router
   ) { }
 
   ngOnInit(): void {
-    this.scripts();
     this.getSubject();
     this.totalPages = this.subjectInterface.length;
+    this.getPage(1);
   }
 
   subb: string = '';
@@ -48,11 +50,6 @@ export class HomeComponent implements OnInit {
   totalPages: any;
   Page = 1;
 
-
-
-
-
-
   getQuiz() {
     this.service.getQuizJson(this.subb)
       .subscribe(res => {
@@ -60,50 +57,6 @@ export class HomeComponent implements OnInit {
       });
   }
 
-  scripts() {
-    const modal = this.ele.nativeElement.querySelector('.modal-quiz');
-    const info_box = this.ele.nativeElement.querySelector(".info_box");
-    const exit_btn = info_box.querySelector(".buttons .quit");
-    const continue_btn = info_box.querySelector(".buttons .restart");
-    const quiz_box = this.ele.nativeElement.querySelector(".quiz_box");
-    const subject = this.ele.nativeElement.querySelector('.subject__title');
-
-
-    // if exitQuiz button clicked
-    // exit_btn.onclick = () => {
-    //   info_box.classList.remove("activeInfo"); //hide info box
-    //   modal.style.display = "none";
-    // }
-
-    // if continueQuiz button clicked
-    // continue_btn.onclick = () => {
-    //   info_box.classList.remove("activeInfo"); //hide info box
-    //   quiz_box.classList.add("activeQuiz"); //show quiz box
-    //   subject.innerText = this.subjectName;
-    //   this.startTimer(30); //calling startTimer function
-    //   this.startTimerLine(0); //calling startTimerLine function
-    // }
-
-
-    // if restartQuiz button clicked
-    // restart_quiz.onclick = ()=>{
-    //     quiz_box.classList.add("activeQuiz"); //show quiz box
-    //     result_box.classList.remove("activeResult"); //hide result box
-    //     timeValue = 15; 
-    //     que_count = 0;
-    //     que_numb = 1;
-    //     userScore = 0;
-    //     widthValue = 0;
-    //     showQuetions(que_count); //calling showQestions function
-    //     queCounter(que_numb); //passing que_numb value to queCounter
-    //     clearInterval(counter); //clear counter
-    //     clearInterval(counterLine); //clear counterLine
-    //     startTimer(timeValue); //calling startTimer function
-    //     startTimerLine(widthValue); //calling startTimerLine function
-    //     timeText.textContent = "Time Left"; //change the text of timeText to Time Left
-    //     next_btn.classList.remove("show"); //hide the next button
-    // }
-  }
   clickQuit(event: any){
     this.info_box.nativeElement.classList.remove("activeInfo");//hide info box
     this.modal.nativeElement.style.display = "none";
@@ -257,5 +210,13 @@ export class HomeComponent implements OnInit {
   }
   randomQuiz() {
     return Math.floor(Math.random() * this.quizInterface.length);
+  }
+
+  getPage(page: number){
+    this.router.navigate(['home', page]);
+  }
+  onClickPage(event: any){
+    this.Page = event;
+    this.getPage(event);
   }
 }
