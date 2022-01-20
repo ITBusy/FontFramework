@@ -20,14 +20,13 @@ export class AccountComponent implements OnInit {
 
 
   ngOnInit(): void {
-    this.checkUsernameExist();
     this.scripts();
     this.valiForm = this.formGroup.group({
-      'userName': new FormControl(null, [Validators.required, Validators.minLength(5)]),
-      'password': new FormControl(null, [Validators.required,
+      'username': new FormControl('', [Validators.required, Validators.minLength(5)]),
+      'password': new FormControl('', [Validators.required,
       Validators.pattern('[A-Z][a-z]+[0-9]+(\\w)*')]),
-      'fullname': new FormControl(null, Validators.required),
-      'email': new FormControl(null, [Validators.required, Validators.email]),
+      'fullname': new FormControl('', Validators.required),
+      'email': new FormControl('', [Validators.required, Validators.email]),
       'birthday': [''],
       'gender': [''],
       'schoolfee': [''],
@@ -35,8 +34,8 @@ export class AccountComponent implements OnInit {
     });
     this.addClass();
     this.LoginForm = this.formGroup.group({
-      'username': new FormControl(''),
-      'password': new FormControl('')
+      'username': [''],
+      'password': ['']
     });
     if (this.authService.isLoggedIn()) {
       this.router.navigate(['home', 1]);
@@ -80,8 +79,8 @@ export class AccountComponent implements OnInit {
   }
   valid(str: string) {
     switch (str) {
-      case 'userName':
-        str = 'userName';
+      case 'username':
+        str = 'username';
         break;
       case 'password':
         str = 'password';
@@ -99,11 +98,11 @@ export class AccountComponent implements OnInit {
   }
 
   getMessageUsername() {
-    if (this.valid('userName')?.hasError('required')) {
+    if (this.valid('username')?.hasError('required')) {
       return 'Username cannot be empty!';
-    } else if (!this.valid('userName')?.hasError('minLenth')) {
+    } else if (!this.valid('username')?.hasError('minLenth')) {
       return 'Username must be more than 5 characters long!';
-    } else if (this.Account[0].username === this.valiForm.value.username) {
+    } else if (this.valiForm.value.username) {
       return 'Username already exists';
     } else {
       return '';
@@ -144,7 +143,7 @@ export class AccountComponent implements OnInit {
           e.target.classList.add('NotEmpty');
         } else {
           if ((!this.valid('password')?.hasError('pattern') && e.target.name === 'password')
-            || (e.target.value.length > 10 && e.target.name === 'userName')
+            || (e.target.value.length > 10 && e.target.name === 'username')
             || (!this.valid('email')?.hasError('email') && e.target.name === 'email')
             || (!this.valid('fullname')?.hasError('requied') && e.target.name === 'fullname')) {
             e.target.classList.remove('NotEmpty');
@@ -155,7 +154,7 @@ export class AccountComponent implements OnInit {
       });
       a[i].addEventListener('input', (e: any) => {
         if ((!this.valid('password')?.hasError('pattern') && e.target.name === 'password')
-          || (e.target.value.length > 10 && e.target.name === 'userName')
+          || (e.target.value.length > 10 && e.target.name === 'username')
           || (!this.valid('email')?.hasError('email') && e.target.name === 'email')
           || (!this.valid('fullname')?.hasError('requied') && e.target.name === 'fullname')) {
           e.target.classList.remove('NotEmpty');
@@ -166,41 +165,47 @@ export class AccountComponent implements OnInit {
     }
   }
 
-  checkUsernameExist() {
-    this.authService.getAccountJson('teonv').subscribe(res => {
-      this.Account = res;
-    });
-  }
-
   onLogin() {
-    console.log(this.LoginForm.value.password);
     if (this.LoginForm.value.username === '' && this.LoginForm.value.password == '') {
       alert('Please enter username and password');
     } else if (this.LoginForm.value.username === '' || this.LoginForm.value.password === '') {
       alert(`Please enter ${this.LoginForm.value.username === '' ? 'username' : 'password'}`);
     } else {
-      const user = this.Account.find((user: any) => {
-        return user.password === this.LoginForm.value.password
-          && user.username === this.LoginForm.value.username;
+      this.authService.getAccountJson().subscribe(res => {
+        const user = res.find((user: any) => {
+          return user.password === this.LoginForm.value.password
+            && user.username === this.LoginForm.value.username;
+        });
+        if (user) {
+          alert('Login successfully');
+          this.authService.setToken('abcdefghijklmnopqrstuvwxyz');
+          this.router.navigate(['home', 1]);
+        } else {
+          alert('Username or password incorrect');
+        }
       });
-      if (user) {
-        alert('Login successfully');
-        this.authService.setToken('abcdefghijklmnopqrstuvwxyz');
-        this.router.navigate(['home', 1]);
-      } else {
-        alert('Username or password incorrect');
-      }
+
     }
   }
 
   onSignUp() {
     if (this.valiForm.valid) {
-      this.authService.AddAccount(this.valiForm.value).subscribe(res => {
-        alert('Sign Up Successfully');
-        this.valiForm.reset();
-        this.Login_container.nativeElement.classList.remove('sign-up-mode');
-      }, err => {
-        alert('Sign Up Error');
+      this.authService.getAccountJson().subscribe(res => {
+        const user = res.find((u: any) => {
+          console.log(u.username === this.valiForm.value.username);
+          return u.username === this.valiForm.value.username;
+        });
+        if (user) {
+          alert('Username already exists')
+        } else {
+          this.authService.AddAccount(this.valiForm.value).subscribe(res => {
+            alert('Sign Up Successfully');
+            this.valiForm.reset();
+            this.Login_container.nativeElement.classList.remove('sign-up-mode');
+          }, err => {
+            alert('Sign Up Error');
+          });
+        }
       });
     } else {
       alert('Please enter information');

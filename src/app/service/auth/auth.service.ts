@@ -28,8 +28,8 @@ export class AuthService {
     this.router.navigate(['account']);
   }
 
-  getAccountJson(username: string) {
-    return this.http.get<AccountInterface[]>(`${baseUrl}/Students?username=${username}`);
+  getAccountJson() {
+    return this.http.get<AccountInterface[]>(`${baseUrl}/Students/`);
   }
 
   AddAccount(Students: any) {

@@ -36,9 +36,9 @@
                 <h2 class="Login__title">Đăng Ký</h2>
                 <div class="Login__input-field">
                     <i class="fas fa-user"></i>
-                    <input type="text" placeholder="Tài Khoản" name="userName" formControlName="userName">
+                    <input type="text" placeholder="Tài Khoản" name="username" formControlName="username">
                 </div>
-                <span *ngIf="valid('userName').invalid && valid('userName').touched"
+                <span *ngIf="valid('username').invalid && valid('username').touched"
                     class="form__message">{{getMessageUsername()}}</span>
 
                 <div class="Login__input-field">
