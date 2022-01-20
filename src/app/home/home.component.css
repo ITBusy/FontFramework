@@ -3,10 +3,6 @@
   left: -3rem;
   margin-top: .125rem;
 }
-*, ::after, ::before {
-  box-sizing: border-box;
-  z-index: 0;
-}
 .nav-link {
   color: #fff !important;
 }

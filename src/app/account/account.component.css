@@ -72,7 +72,7 @@ form.Login__sign-up--form {
     width: 100%;
     height: 55px;
     background-color: #f0f0f0;
-    margin: 10px 0;
+    margin: 5px 0;
     border-radius: 55px;
     display: grid;
     grid-template-columns: 15% 85%;
@@ -106,7 +106,13 @@ form.Login__sign-up--form {
     cursor: pointer;
     display: none;
 }
-
+.form__message{
+    width: 350px;
+    margin-bottom: 4px;
+    margin-top: -6px;
+    color: #ff0000;
+    font-size: 0.8rem;
+}
 input.show-pass.login:valid~span.show-l,
 input.show-pass.signup:valid~span.show-s {
     display: block;

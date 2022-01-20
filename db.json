@@ -8,7 +8,8 @@
       "gender": "true",
       "birthday": "1995-12-21",
       "schoolfee": "1500000",
-      "marks": "0"
+      "marks": "0",
+      "id": 3
     },
     {
       "username": "pheonv",
@@ -18,7 +19,8 @@
       "gender": "true",
       "birthday": "1985-10-11",
       "schoolfee": "2500000",
-      "marks": "0"
+      "marks": "0",
+      "id": 2
     },
     {
       "username": "nopt",
@@ -28,7 +30,19 @@
       "gender": "false",
       "birthday": "1993-05-15",
       "schoolfee": "2000000",
-      "marks": "0"
+      "marks": "0",
+      "id": 1
+    },
+    {
+      "userName": "VanHung",
+      "password": "Admin123",
+      "fullname": "Lê Văn Hùng",
+      "email": "abc@gmail.com",
+      "birthday": "",
+      "gender": "",
+      "schoolfee": "",
+      "mark": "",
+      "id": 4
     }
   ],
   "ADAV": [
@@ -370,7 +384,7 @@
     },
     {
       "Id": 25120,
-      "Text": "Lệnh sau dùng để làm gì?                                                                                   \u003creceiver             android:name=\".MyCallReceiver\"             android:exported=\"false\" \u003e  \u003c/receiver\u003e",
+      "Text": "Lệnh sau dùng để làm gì?                                                                                   <receiver             android:name=\".MyCallReceiver\"             android:exported=\"false\" >  </receiver>",
       "Marks": 1,
       "AnswerId": 104177,
       "Answers": [
@@ -1624,19 +1638,19 @@
       "Answers": [
         {
           "Id": 104376,
-          "Text": "Vào SDK Manager, chọn extra \u003e google play billing library"
+          "Text": "Vào SDK Manager, chọn extra > google play billing library"
         },
         {
           "Id": 104377,
-          "Text": "Vào SDK Manager, chọn extra \u003e google repository"
+          "Text": "Vào SDK Manager, chọn extra > google repository"
         },
         {
           "Id": 104378,
-          "Text": "Vào SDK Manager, chọn extra \u003e google play service"
+          "Text": "Vào SDK Manager, chọn extra > google play service"
         },
         {
           "Id": 104379,
-          "Text": "Vào SDK Manager, chọn extra \u003e google play apk expansion librariry"
+          "Text": "Vào SDK Manager, chọn extra > google play apk expansion librariry"
         }
       ]
     },
@@ -1772,15 +1786,15 @@
         },
         {
           "Id": 104401,
-          "Text": "Vào Eclipse, Preferences-\u003eAndroid-\u003eBuild"
+          "Text": "Vào Eclipse, Preferences->Android->Build"
         },
         {
           "Id": 104402,
-          "Text": "Vào Eclipse, Preferences-\u003eAndroid-\u003eDDMS"
+          "Text": "Vào Eclipse, Preferences->Android->DDMS"
         },
         {
           "Id": 104403,
-          "Text": "Vào Eclipse, Preferences-\u003eAndroid-\u003eNDK"
+          "Text": "Vào Eclipse, Preferences->Android->NDK"
         }
       ]
     },
@@ -3332,19 +3346,19 @@
       "Answers": [
         {
           "Id": 103555,
-          "Text": "SELECT @a = 1, @b = \u0027kí tự Unicode\u0027"
+          "Text": "SELECT @a = 1, @b = 'kí tự Unicode'"
         },
         {
           "Id": 103556,
-          "Text": "SET @a = 1, @b = \u0027kí tự Unicode\u0027"
+          "Text": "SET @a = 1, @b = 'kí tự Unicode'"
         },
         {
           "Id": 103557,
-          "Text": "SET @a = 1, @b = N\u0027kí tự Unicode\u0027"
+          "Text": "SET @a = 1, @b = N'kí tự Unicode'"
         },
         {
           "Id": 103558,
-          "Text": "SELECT @a = 1, @b = N\u0027kí tự Unicode\u0027"
+          "Text": "SELECT @a = 1, @b = N'kí tự Unicode'"
         }
       ]
     },
@@ -3494,7 +3508,7 @@
     },
     {
       "Id": 24976,
-      "Text": "Giả sử biến @String được khai báo như sau DECLARE @String varchar.Mã kịch bản sau trả về kết quả là SET @String = \u0027SQL Server 2008\u0027 SELECT LEN(@String)",
+      "Text": "Giả sử biến @String được khai báo như sau DECLARE @String varchar.Mã kịch bản sau trả về kết quả là SET @String = 'SQL Server 2008' SELECT LEN(@String)",
       "Marks": 1,
       "AnswerId": 103586,
       "Answers": [
@@ -3566,7 +3580,7 @@
     },
     {
       "Id": 24979,
-      "Text": "Lệnh gán giá trị cho cột PaymentDate có kiểu SmallDatetime sau đây có thực hiện phép chuyển đổi ngầm không PaymentDate = \u00272008-08-05\u0027",
+      "Text": "Lệnh gán giá trị cho cột PaymentDate có kiểu SmallDatetime sau đây có thực hiện phép chuyển đổi ngầm không PaymentDate = '2008-08-05'",
       "Marks": 1,
       "AnswerId": 103597,
       "Answers": [
@@ -3638,7 +3652,7 @@
     },
     {
       "Id": 24982,
-      "Text": "Câu lệnh SELECT DATEDIFF(month, \u00272008-09-30\u0027, \u00272007-12-01\u0027) sau đây trả về kết quả là:",
+      "Text": "Câu lệnh SELECT DATEDIFF(month, '2008-09-30', '2007-12-01') sau đây trả về kết quả là:",
       "Marks": 1,
       "AnswerId": 103609,
       "Answers": [
@@ -3662,7 +3676,7 @@
     },
     {
       "Id": 24983,
-      "Text": "Cột StartDate của bảng DateSample có kiểu dữ liệu datetime. Câu lệnh SELECT nào sau đây trả về tất cả các cột của bảng DateSample có StartDate là ngày 28-02-2012 A. SELECT * FROM DateSample WHERE StartDate = \u00272012-02-28\u0027 B. SELECT * FROM DateSample WHERE ",
+      "Text": "Cột StartDate của bảng DateSample có kiểu dữ liệu datetime. Câu lệnh SELECT nào sau đây trả về tất cả các cột của bảng DateSample có StartDate là ngày 28-02-2012 A. SELECT * FROM DateSample WHERE StartDate = '2012-02-28' B. SELECT * FROM DateSample WHERE ",
       "Marks": 1,
       "AnswerId": 103612,
       "Answers": [
@@ -3710,7 +3724,7 @@
     },
     {
       "Id": 24985,
-      "Text": "Câu lệnh SELECT CHARINDEX(\u0027SQL\u0027, \u0027HELLO SQL Server\u0027) trả về kết quả là",
+      "Text": "Câu lệnh SELECT CHARINDEX('SQL', 'HELLO SQL Server') trả về kết quả là",
       "Marks": 1,
       "AnswerId": 103622,
       "Answers": [
@@ -3840,11 +3854,11 @@
         },
         {
           "Id": 103640,
-          "Text": "Khi thực thi câu lệnh COMMIT TRAN, nếu @@TRANCOUNT \u003e 1, mọi thay đổi đã được thực hiện trên CSDL trong suốt giao dịch sẽ được commit."
+          "Text": "Khi thực thi câu lệnh COMMIT TRAN, nếu @@TRANCOUNT > 1, mọi thay đổi đã được thực hiện trên CSDL trong suốt giao dịch sẽ được commit."
         },
         {
           "Id": 103641,
-          "Text": "Khi thực thi câu lệnh COMMIT TRAN, nếu @@TRANCOUNT \u003e 1, các thay đổi sẽ không được commit. Thay vào đó @@TRANCOUNT giảm đi 1."
+          "Text": "Khi thực thi câu lệnh COMMIT TRAN, nếu @@TRANCOUNT > 1, các thay đổi sẽ không được commit. Thay vào đó @@TRANCOUNT giảm đi 1."
         },
         {
           "Id": 103642,
@@ -3878,7 +3892,7 @@
     },
     {
       "Id": 24992,
-      "Text": "Phát biểu nào sau đây đúng về Stored Procedure sau: CREATE PROC spParameters @a int = 0, @b int OUT, @String Nvarchar(50) = \u0027%\u0027 AS",
+      "Text": "Phát biểu nào sau đây đúng về Stored Procedure sau: CREATE PROC spParameters @a int = 0, @b int OUT, @String Nvarchar(50) = '%' AS",
       "Marks": 1,
       "AnswerId": 103650,
       "Answers": [
@@ -3950,7 +3964,7 @@
     },
     {
       "Id": 24995,
-      "Text": "Mã kịch bản sau sẽ làm gì khi được thực thi IF OBJECT_ID(\u0027spCopyInvoices\u0027) IS NOT NULL DROP PROC spCopyInvoices CREATE PROC spCopyInvoices AS SELECT * INTO InvoiceCopy FROM Invoices",
+      "Text": "Mã kịch bản sau sẽ làm gì khi được thực thi IF OBJECT_ID('spCopyInvoices') IS NOT NULL DROP PROC spCopyInvoices CREATE PROC spCopyInvoices AS SELECT * INTO InvoiceCopy FROM Invoices",
       "Marks": 1,
       "AnswerId": 103660,
       "Answers": [
@@ -4004,7 +4018,7 @@
       "Answers": [
         {
           "Id": 103667,
-          "Text": "DROP \u0027Vendors_SW\u0027"
+          "Text": "DROP 'Vendors_SW'"
         },
         {
           "Id": 103668,
@@ -4012,7 +4026,7 @@
         },
         {
           "Id": 103669,
-          "Text": "DROP VIEW \u0027Vendors_SW\u0027"
+          "Text": "DROP VIEW 'Vendors_SW'"
         },
         {
           "Id": 103670,
@@ -4118,7 +4132,7 @@
     },
     {
       "Id": 25002,
-      "Text": "Phát biểu nào ĐÚNG về đoạn mã dưới đây? CREATE VIEW OutstandingInvoices AS SELECT InvoiceNumber, InvoiceDate, InvoiceTotal, InvoiceTotal - PaymentTotal – CreditTotal AS BalanceDue FROM Invoices WHERE InvoiceTotal - PaymentTotal - CreditTotal \u003e 0",
+      "Text": "Phát biểu nào ĐÚNG về đoạn mã dưới đây? CREATE VIEW OutstandingInvoices AS SELECT InvoiceNumber, InvoiceDate, InvoiceTotal, InvoiceTotal - PaymentTotal – CreditTotal AS BalanceDue FROM Invoices WHERE InvoiceTotal - PaymentTotal - CreditTotal > 0",
       "Marks": 1,
       "AnswerId": 103689,
       "Answers": [
@@ -4340,19 +4354,19 @@
       "Answers": [
         {
           "Id": 103723,
-          "Text": "CREATE LOGIN JohnDoe WITH PASSWORD = \u0027pt8806FG$B\u0027, DEFAULT_DATABASE = AP USE APCREATE USER JohnDoe FOR LOGIN JohnDoe"
+          "Text": "CREATE LOGIN JohnDoe WITH PASSWORD = 'pt8806FG$B', DEFAULT_DATABASE = AP USE APCREATE USER JohnDoe FOR LOGIN JohnDoe"
         },
         {
           "Id": 103724,
-          "Text": "CREATE LOGIN ID JohnDoe WITH PASSWORD = \u0027pt8806FG$B\u0027, DEFAULT_DATABASE = AP USE APCREATE USER JohnDoe"
+          "Text": "CREATE LOGIN ID JohnDoe WITH PASSWORD = 'pt8806FG$B', DEFAULT_DATABASE = AP USE APCREATE USER JohnDoe"
         },
         {
           "Id": 103725,
-          "Text": "CREATE LOGIN ID JohnDoe WITH PASSWORD = \u0027pt8806FG$B\u0027, DEFAULT_DATABASE = AP USE APCREATE USER JohnDoe FOR LOGIN ID JohnDoe"
+          "Text": "CREATE LOGIN ID JohnDoe WITH PASSWORD = 'pt8806FG$B', DEFAULT_DATABASE = AP USE APCREATE USER JohnDoe FOR LOGIN ID JohnDoe"
         },
         {
           "Id": 103726,
-          "Text": "CREATE LOGIN JohnDoe WITH PASSWORD = \u0027pt8806FG$B\u0027, DEFAULT_DATABASE = AP USE APCREATE DATABASE USER JohnDoe FOR LOGIN JohnDoe"
+          "Text": "CREATE LOGIN JohnDoe WITH PASSWORD = 'pt8806FG$B', DEFAULT_DATABASE = AP USE APCREATE DATABASE USER JohnDoe FOR LOGIN JohnDoe"
         }
       ]
     },
@@ -4454,7 +4468,7 @@
     },
     {
       "Id": 25016,
-      "Text": "Invoices là tên một bảng trong CSDL. Câu lệnh sp_Help \u0027Invoices\u0027 trả về___________",
+      "Text": "Invoices là tên một bảng trong CSDL. Câu lệnh sp_Help 'Invoices' trả về___________",
       "Marks": 1,
       "AnswerId": 103743,
       "Answers": [
@@ -5206,19 +5220,19 @@
       "Answers": [
         {
           "Id": 103427,
-          "Text": "SELECT * FROM EMPLOYEES WHERE SALARY \u003e 10000 ORDER WITH LAST_NAME, FIRST_NAME"
+          "Text": "SELECT * FROM EMPLOYEES WHERE SALARY > 10000 ORDER WITH LAST_NAME, FIRST_NAME"
         },
         {
           "Id": 103428,
-          "Text": "SELECT * FROM EMPLOYEES WHERE SALARY \u003e 10000 SORT BY LAST_NAME, FIRST_NAME"
+          "Text": "SELECT * FROM EMPLOYEES WHERE SALARY > 10000 SORT BY LAST_NAME, FIRST_NAME"
         },
         {
           "Id": 103429,
-          "Text": "SELECT * FROM EMPLOYEES WHERE SALARY \u003e 10000 ORDER BY FIRST_NAME, LAST_NAME"
+          "Text": "SELECT * FROM EMPLOYEES WHERE SALARY > 10000 ORDER BY FIRST_NAME, LAST_NAME"
         },
         {
           "Id": 103430,
-          "Text": "SELECT * FROM EMPLOYEES WHERE SALARY \u003e 10000 ORDER LAST_NAME, FIRST_NAME"
+          "Text": "SELECT * FROM EMPLOYEES WHERE SALARY > 10000 ORDER LAST_NAME, FIRST_NAME"
         }
       ]
     },
@@ -5254,19 +5268,19 @@
       "Answers": [
         {
           "Id": 103435,
-          "Text": "SELECT * FROM EMPLOYEES WHERE FIRST_NAME LIKE \u0027Pete%\u0027"
+          "Text": "SELECT * FROM EMPLOYEES WHERE FIRST_NAME LIKE 'Pete%'"
         },
         {
           "Id": 103436,
-          "Text": "SELECT * FROM EMPLOYEES WHERE FIRST_NAME LIKE \u0027%Pete%\u0027"
+          "Text": "SELECT * FROM EMPLOYEES WHERE FIRST_NAME LIKE '%Pete%'"
         },
         {
           "Id": 103437,
-          "Text": "SELECT * FROM EMPLOYEES WHERE FIRST_NAME LIKE \u0027Pete\u0027"
+          "Text": "SELECT * FROM EMPLOYEES WHERE FIRST_NAME LIKE 'Pete'"
         },
         {
           "Id": 103438,
-          "Text": "SELECT * FROM EMPLOYEES WHERE FIRST_NAME LIKE \u0027%Pete\u0027"
+          "Text": "SELECT * FROM EMPLOYEES WHERE FIRST_NAME LIKE '%Pete'"
         }
       ]
     },
@@ -5286,11 +5300,11 @@
         },
         {
           "Id": 103441,
-          "Text": "SELECT * FROM EMPLOYEES SORT \u0027First_Name\u0027 DESC"
+          "Text": "SELECT * FROM EMPLOYEES SORT 'First_Name' DESC"
         },
         {
           "Id": 103442,
-          "Text": "SELECT * FROM EMPLOYEES SORT BY \u0027First_Name\u0027 DESC"
+          "Text": "SELECT * FROM EMPLOYEES SORT BY 'First_Name' DESC"
         }
       ]
     },
@@ -5302,19 +5316,19 @@
       "Answers": [
         {
           "Id": 103443,
-          "Text": "SELECT * FROM EMPLOYEES WHERE FIRST_NAME \u003c\u003e\u0027Peter\u0027 AND LAST_NAME\u003c\u003e\u0027Jackson\u0027"
+          "Text": "SELECT * FROM EMPLOYEES WHERE FIRST_NAME <>'Peter' AND LAST_NAME<>'Jackson'"
         },
         {
           "Id": 103444,
-          "Text": "SELECT FIRST_NAME=\u0027Peter\u0027 AND LAST_NAME=\u0027Jackson\u0027 FROM EMPLOYEES WHERE FIRST_NAME =\u0027Peter\u0027 AND LAST_NAME=\u0027Jackson\u0027"
+          "Text": "SELECT FIRST_NAME='Peter' AND LAST_NAME='Jackson' FROM EMPLOYEES WHERE FIRST_NAME ='Peter' AND LAST_NAME='Jackson'"
         },
         {
           "Id": 103445,
-          "Text": "SELECT * FROM EMPLOYEES WHERE FIRST_NAME =\u0027Peter\u0027 AND LAST_NAME=\u0027Jackson\u0027"
+          "Text": "SELECT * FROM EMPLOYEES WHERE FIRST_NAME ='Peter' AND LAST_NAME='Jackson'"
         },
         {
           "Id": 103446,
-          "Text": "SELECT FIRST_NAME=\u0027Peter\u0027 AND LAST_NAME=\u0027Jackson\u0027 FROM EMPLOYEES"
+          "Text": "SELECT FIRST_NAME='Peter' AND LAST_NAME='Jackson' FROM EMPLOYEES"
         }
       ]
     },
@@ -5350,19 +5364,19 @@
       "Answers": [
         {
           "Id": 103451,
-          "Text": "SELECT * FROM EMPLOYEES WHERE FIRST_NAME LIKE \u0027[^ABC]%\u0027"
+          "Text": "SELECT * FROM EMPLOYEES WHERE FIRST_NAME LIKE '[^ABC]%'"
         },
         {
           "Id": 103452,
-          "Text": "SELECT * FROM EMPLOYEES WHERE FIRST_NAME LIKE \u0027[ABC]_\u0027"
+          "Text": "SELECT * FROM EMPLOYEES WHERE FIRST_NAME LIKE '[ABC]_'"
         },
         {
           "Id": 103453,
-          "Text": "SELECT * FROM EMPLOYEES WHERE FIRST_NAME LIKE \u0027[ABC]%\u0027"
+          "Text": "SELECT * FROM EMPLOYEES WHERE FIRST_NAME LIKE '[ABC]%'"
         },
         {
           "Id": 103454,
-          "Text": "SELECT * FROM EMPLOYEES WHERE FIRST_NAME LIKE \u0027[ABC]*\u0027"
+          "Text": "SELECT * FROM EMPLOYEES WHERE FIRST_NAME LIKE '[ABC]*'"
         }
       ]
     },
@@ -5410,7 +5424,7 @@
         },
         {
           "Id": 103462,
-          "Text": "SELECT * FROM EMPLOYEES WHERE SALARY =\u003e 10000 AND \u003c= 11000"
+          "Text": "SELECT * FROM EMPLOYEES WHERE SALARY => 10000 AND <= 11000"
         }
       ]
     },
@@ -5422,19 +5436,19 @@
       "Answers": [
         {
           "Id": 103463,
-          "Text": "INSERT Employees(Employee_ID, First_Name, Last_Name) INTO (213, \u0027Abraham\u0027, \u0027Lincoln\u0027)"
+          "Text": "INSERT Employees(Employee_ID, First_Name, Last_Name) INTO (213, 'Abraham', 'Lincoln')"
         },
         {
           "Id": 103464,
-          "Text": "INSERT (213, \u0027Abraham\u0027, \u0027Lincoln\u0027) INTO Employees(Employee_ID, First_Name, Last_Name)"
+          "Text": "INSERT (213, 'Abraham', 'Lincoln') INTO Employees(Employee_ID, First_Name, Last_Name)"
         },
         {
           "Id": 103465,
-          "Text": "INSERT VALUES (213, \u0027Abraham\u0027, \u0027Lincoln\u0027) INTO Employees(Employee_ID, First_Name, Last_Name)"
+          "Text": "INSERT VALUES (213, 'Abraham', 'Lincoln') INTO Employees(Employee_ID, First_Name, Last_Name)"
         },
         {
           "Id": 103466,
-          "Text": "INSERT INTO Employees(Employee_ID, First_Name, Last_Name) VALUES (213, \u0027Abraham\u0027, \u0027Lincoln\u0027)"
+          "Text": "INSERT INTO Employees(Employee_ID, First_Name, Last_Name) VALUES (213, 'Abraham', 'Lincoln')"
         }
       ]
     },
@@ -5810,7 +5824,7 @@
     },
     {
       "Id": 26055,
-      "Text": "Đánh giá (true hoặc false) cho mỗi biểu thức sau đây: 14 \u003c= 14 14 \u003c 14 -9 \u003e -25 -25 \u003e -9",
+      "Text": "Đánh giá (true hoặc false) cho mỗi biểu thức sau đây: 14 <= 14 14 < 14 -9 > -25 -25 > -9",
       "Marks": 1,
       "AnswerId": 107924,
       "Answers": [
@@ -5930,7 +5944,7 @@
     },
     {
       "Id": 26059,
-      "Text": "Khối lệnh sau sẽ in ra màn hình cái gì?int sum = 14;if ( sum \u003c 20 ) System.out.print(\"Under \");else System.out.print(\"Over \");System.out.println(\"the limit.\");",
+      "Text": "Khối lệnh sau sẽ in ra màn hình cái gì?int sum = 14;if ( sum < 20 ) System.out.print(\"Under \");else System.out.print(\"Over \");System.out.println(\"the limit.\");",
       "Marks": 1,
       "AnswerId": 107941,
       "Answers": [
@@ -6028,7 +6042,7 @@
         },
         {
           "Id": 107958,
-          "Text": "\\\u0027\u0027"
+          "Text": "\\''"
         },
         {
           "Id": 107959,
@@ -6040,7 +6054,7 @@
         },
         {
           "Id": 107961,
-          "Text": "\\\u0027"
+          "Text": "\\'"
         }
       ]
     },
@@ -6110,7 +6124,7 @@
     },
     {
       "Id": 26065,
-      "Text": "Hãy cho biến kết quả sau khi chạy chương trình sau:public static void main(String[] args) { int n,d; n = 10; d = 0; if (d!=0 \u0026\u0026 (n%d) == 0) { System.out.println(n + \"chia het cho \" + d ); } else if (d==0) { System.out.println(\"Khong the thuc hien phia chi",
+      "Text": "Hãy cho biến kết quả sau khi chạy chương trình sau:public static void main(String[] args) { int n,d; n = 10; d = 0; if (d!=0 && (n%d) == 0) { System.out.println(n + \"chia het cho \" + d ); } else if (d==0) { System.out.println(\"Khong the thuc hien phia chi",
       "Marks": 1,
       "AnswerId": 107976,
       "Answers": [
@@ -6194,7 +6208,7 @@
     },
     {
       "Id": 26068,
-      "Text": "Hãy cho biến kết quả sau khi chạy chương trình sau:public static void main(String[] args) { int n,d; n = 10; d = 0; if (d!=0 \u0026 (n%d) == 0) { System.out.println(n + \"chia het cho \" + d ); } else if (d==0) { System.out.println(\"Khong the thuc hien phia chia",
+      "Text": "Hãy cho biến kết quả sau khi chạy chương trình sau:public static void main(String[] args) { int n,d; n = 10; d = 0; if (d!=0 & (n%d) == 0) { System.out.println(n + \"chia het cho \" + d ); } else if (d==0) { System.out.println(\"Khong the thuc hien phia chia",
       "Marks": 1,
       "AnswerId": 107990,
       "Answers": [
@@ -6278,7 +6292,7 @@
     },
     {
       "Id": 26071,
-      "Text": "Giá trị của x sau khi đoạn code sau được thi hành? int x = 10, y = 20; while (y \u003c 100) { x += y; }",
+      "Text": "Giá trị của x sau khi đoạn code sau được thi hành? int x = 10, y = 20; while (y < 100) { x += y; }",
       "Marks": 1,
       "AnswerId": 108005,
       "Answers": [
@@ -6334,7 +6348,7 @@
     },
     {
       "Id": 26073,
-      "Text": "Hãy cho biết giá trị được hiển thị trên màn hình console sau khi thực hiện đoạn code sau: int x = 10; for( x = 1; x \u003c= 5; x++) { System.out.print(x + \",\"); } System.out.println(x);",
+      "Text": "Hãy cho biết giá trị được hiển thị trên màn hình console sau khi thực hiện đoạn code sau: int x = 10; for( x = 1; x <= 5; x++) { System.out.print(x + \",\"); } System.out.println(x);",
       "Marks": 1,
       "AnswerId": 108017,
       "Answers": [
@@ -6394,7 +6408,7 @@
     },
     {
       "Id": 26075,
-      "Text": "Câu lệnh sau sai ở đâu?for (int k=2,k\u003c=12,k++)",
+      "Text": "Câu lệnh sau sai ở đâu?for (int k=2,k<=12,k++)",
       "Marks": 1,
       "AnswerId": 108025,
       "Answers": [
@@ -6442,7 +6456,7 @@
     },
     {
       "Id": 26077,
-      "Text": "Cho biết kết quả thực hiện của đoạn chương trình sau?for(int i=1; i\u003c15; i=i+3) { System.out.print(i);}",
+      "Text": "Cho biết kết quả thực hiện của đoạn chương trình sau?for(int i=1; i<15; i=i+3) { System.out.print(i);}",
       "Marks": 1,
       "AnswerId": 108036,
       "Answers": [
@@ -7210,7 +7224,7 @@
     },
     {
       "Id": 26106,
-      "Text": "Cho biết kết quả sau khi chạy đoạn code sau:package testpackage;public class Test{public static void main(String args[]){System.out.println(goFigure(60));}public static int goFigure(int x){if (x \u003c 100)x = goFigure(x + 10);return (x - 1);}}",
+      "Text": "Cho biết kết quả sau khi chạy đoạn code sau:package testpackage;public class Test{public static void main(String args[]){System.out.println(goFigure(60));}public static int goFigure(int x){if (x < 100)x = goFigure(x + 10);return (x - 1);}}",
       "Marks": 1,
       "AnswerId": 108171,
       "Answers": [
@@ -7334,7 +7348,7 @@
     },
     {
       "Id": 26111,
-      "Text": "Cho đoạn code sau:class Super {public float getNum( ) {return 3.0f;}}public class Sub extends Super {} Phương thức nào đặt sau \u0027public class Sub extends Super {\u0027 sẽ gây ra lỗi khi biên dịch?",
+      "Text": "Cho đoạn code sau:class Super {public float getNum( ) {return 3.0f;}}public class Sub extends Super {} Phương thức nào đặt sau 'public class Sub extends Super {' sẽ gây ra lỗi khi biên dịch?",
       "Marks": 1,
       "AnswerId": 108191,
       "Answers": [
@@ -7594,7 +7608,7 @@
         },
         {
           "Id": 107258,
-          "Text": "constant(\u0027max\u0027, 30)"
+          "Text": "constant('max', 30)"
         }
       ]
     },
@@ -7630,19 +7644,19 @@
       "Answers": [
         {
           "Id": 107263,
-          "Text": "\u003c?\u003e"
+          "Text": "<?>"
         },
         {
           "Id": 107264,
-          "Text": "\u003c?php ?\u003e"
+          "Text": "<?php ?>"
         },
         {
           "Id": 107265,
-          "Text": "\u003cphp\u003e \u003c/php\u003e"
+          "Text": "<php> </php>"
         },
         {
           "Id": 107266,
-          "Text": "\u003c? ?\u003e"
+          "Text": "<? ?>"
         }
       ]
     },
@@ -7702,7 +7716,7 @@
       "Answers": [
         {
           "Id": 107275,
-          "Text": "$b = $_GET[\u0027a\u0027]"
+          "Text": "$b = $_GET['a']"
         },
         {
           "Id": 107276,
@@ -7720,7 +7734,7 @@
     },
     {
       "Id": 25897,
-      "Text": "$i = 1; while ($i \u003c= 7) { $i++; } Sau khi thoát khỏi vòng lặp thì $i có giá trị bao nhiêu",
+      "Text": "$i = 1; while ($i <= 7) { $i++; } Sau khi thoát khỏi vòng lặp thì $i có giá trị bao nhiêu",
       "Marks": 1,
       "AnswerId": 107282,
       "Answers": [
@@ -7864,7 +7878,7 @@
     },
     {
       "Id": 25903,
-      "Text": "Để lấy giá trị của phần tử \u0027Ten\u0027 của mảng $a và lưu vào biến $b thì dùng cấu trúc nào sau đây",
+      "Text": "Để lấy giá trị của phần tử 'Ten' của mảng $a và lưu vào biến $b thì dùng cấu trúc nào sau đây",
       "Marks": 1,
       "AnswerId": 107306,
       "Answers": [
@@ -7874,7 +7888,7 @@
         },
         {
           "Id": 107304,
-          "Text": "$b = $a(\u0027Ten\u0027)"
+          "Text": "$b = $a('Ten')"
         },
         {
           "Id": 107305,
@@ -7882,19 +7896,19 @@
         },
         {
           "Id": 107306,
-          "Text": "$b = $a[\u0027Ten\u0027]"
+          "Text": "$b = $a['Ten']"
         }
       ]
     },
     {
       "Id": 25904,
-      "Text": "Để gán giá trị \u0027abc\u0027 cho phần tử \u0027Ten\u0027 của mảng $a thì dùng cấu trúc nào sau đây",
+      "Text": "Để gán giá trị 'abc' cho phần tử 'Ten' của mảng $a thì dùng cấu trúc nào sau đây",
       "Marks": 1,
       "AnswerId": 107307,
       "Answers": [
         {
           "Id": 107307,
-          "Text": "$a[\u0027Ten\u0027] = \u0027abc\u0027"
+          "Text": "$a['Ten'] = 'abc'"
         },
         {
           "Id": 107308,
@@ -7902,7 +7916,7 @@
         },
         {
           "Id": 107309,
-          "Text": "$a(\u0027Ten\u0027) = \u0027abc\u0027"
+          "Text": "$a('Ten') = 'abc'"
         },
         {
           "Id": 107310,
@@ -7942,11 +7956,11 @@
       "Answers": [
         {
           "Id": 107315,
-          "Text": "$db-\u003equery(DELETE * FROM Table)"
+          "Text": "$db->query(DELETE * FROM Table)"
         },
         {
           "Id": 107316,
-          "Text": "$db-\u003eexecute(\u0027DELETE * FROM Table\u0027)"
+          "Text": "$db->execute('DELETE * FROM Table')"
         },
         {
           "Id": 107317,
@@ -7954,7 +7968,7 @@
         },
         {
           "Id": 107318,
-          "Text": "$db-\u003eexec(\u0027DELETE * FROM Table\u0027)"
+          "Text": "$db->exec('DELETE * FROM Table')"
         }
       ]
     },
@@ -8032,7 +8046,7 @@
     },
     {
       "Id": 25910,
-      "Text": "Hãy cho biết kết quả output của đoạn chương trình sau:$a = 9; function abc(\u0026$b,$c){ $b=$b+$c; return $b; } abc($a,2); echo $a;",
+      "Text": "Hãy cho biết kết quả output của đoạn chương trình sau:$a = 9; function abc(&$b,$c){ $b=$b+$c; return $b; } abc($a,2); echo $a;",
       "Marks": 1,
       "AnswerId": 107331,
       "Answers": [
@@ -8056,7 +8070,7 @@
     },
     {
       "Id": 25911,
-      "Text": "Hãy cho biết kết quả output của đoạn chương trình sau:$a = 9; function abc(\u0026$b){ $b=$b++-2; return $b; } abc($a); echo $a;",
+      "Text": "Hãy cho biết kết quả output của đoạn chương trình sau:$a = 9; function abc(&$b){ $b=$b++-2; return $b; } abc($a); echo $a;",
       "Marks": 1,
       "AnswerId": 107336,
       "Answers": [
@@ -8104,7 +8118,7 @@
     },
     {
       "Id": 25913,
-      "Text": "Hãy cho biết kết quả output của đoạn chương trình sau:$a = 9; function abc(\u0026$b){ $b=-$b++; return $b; } abc($a); echo $a;",
+      "Text": "Hãy cho biết kết quả output của đoạn chương trình sau:$a = 9; function abc(&$b){ $b=-$b++; return $b; } abc($a); echo $a;",
       "Marks": 1,
       "AnswerId": 107346,
       "Answers": [
@@ -8272,7 +8286,7 @@
     },
     {
       "Id": 25920,
-      "Text": "class Number { public $a = 5; public function __construct($b) { $a = $b + 3; } } $num = new Number(3); echo $num-\u003ea; Kết quả màn hình hiện gì?",
+      "Text": "class Number { public $a = 5; public function __construct($b) { $a = $b + 3; } } $num = new Number(3); echo $num->a; Kết quả màn hình hiện gì?",
       "Marks": 1,
       "AnswerId": 107371,
       "Answers": [
@@ -8296,7 +8310,7 @@
     },
     {
       "Id": 25921,
-      "Text": "Hãy cho biết output của đoạn chương trình sau:class Abc { public $a = 6; public function __construct($b) { $a = $b + 3; } } $num1 = new Abc(4); $num2 = $num1 +1; echo $num2-\u003ea",
+      "Text": "Hãy cho biết output của đoạn chương trình sau:class Abc { public $a = 6; public function __construct($b) { $a = $b + 3; } } $num1 = new Abc(4); $num2 = $num1 +1; echo $num2->a",
       "Marks": 1,
       "AnswerId": 107377,
       "Answers": [
@@ -8320,7 +8334,7 @@
     },
     {
       "Id": 25922,
-      "Text": "Hãy cho biết output của đoạn chương trình sau:class Abc { public $a = 6; public function __construct($b) { $a = $b + 3; } } $num1 = new Abc(4); $num2 = clone $num1; echo $num2-\u003ea+1",
+      "Text": "Hãy cho biết output của đoạn chương trình sau:class Abc { public $a = 6; public function __construct($b) { $a = $b + 3; } } $num1 = new Abc(4); $num2 = clone $num1; echo $num2->a+1",
       "Marks": 1,
       "AnswerId": 107381,
       "Answers": [
@@ -8392,7 +8406,7 @@
     },
     {
       "Id": 25925,
-      "Text": "class Number { public $a = 5; public function __construct($b) { $a = $b + 3; } } $num1 = new Number(4); $num2 = $num1; $num2-\u003e$a + 2; echo $num1-\u003ea;Kết quả màn hình hiển thị gì?",
+      "Text": "class Number { public $a = 5; public function __construct($b) { $a = $b + 3; } } $num1 = new Number(4); $num2 = $num1; $num2->$a + 2; echo $num1->a;Kết quả màn hình hiển thị gì?",
       "Marks": 1,
       "AnswerId": 107392,
       "Answers": [
@@ -8416,7 +8430,7 @@
     },
     {
       "Id": 25926,
-      "Text": "Hãy cho biết output của đoạn chương trình sau:class Abc { public $a = 6; public function __construct($b) { $a = $b + 3; } } $num1 = new Abc(4); $num2 = $num1; echo $num2-\u003ea",
+      "Text": "Hãy cho biết output của đoạn chương trình sau:class Abc { public $a = 6; public function __construct($b) { $a = $b + 3; } } $num1 = new Abc(4); $num2 = $num1; echo $num2->a",
       "Marks": 1,
       "AnswerId": 107398,
       "Answers": [
@@ -8440,7 +8454,7 @@
     },
     {
       "Id": 25927,
-      "Text": "class Number { public $a = 5; public function __construct($b) { $a = $b + 3; } } $num = new Number(); echo $num-\u003ea; Kết quả màn hình hiển thị gì?",
+      "Text": "class Number { public $a = 5; public function __construct($b) { $a = $b + 3; } } $num = new Number(); echo $num->a; Kết quả màn hình hiển thị gì?",
       "Marks": 1,
       "AnswerId": 107399,
       "Answers": [
@@ -8464,7 +8478,7 @@
     },
     {
       "Id": 25928,
-      "Text": "class Number { public $a = 5; public function __construct($b) { $a = $b + 3; } } $num1 = new Number(4); $num2 = clone $num1; $num2-\u003e$a + 2; echo $num1-\u003ea;Kết quả màn hình hiển thị gì?",
+      "Text": "class Number { public $a = 5; public function __construct($b) { $a = $b + 3; } } $num1 = new Number(4); $num2 = clone $num1; $num2->$a + 2; echo $num1->a;Kết quả màn hình hiển thị gì?",
       "Marks": 1,
       "AnswerId": 107404,
       "Answers": [
@@ -8488,7 +8502,7 @@
     },
     {
       "Id": 25929,
-      "Text": "Hãy cho biết output của đoạn chương trình sau:class Abc { public $a = 6; public function __construct($b) { $a = $b + 3; } } $num1 = new Abc(4); $num2 = clone $num1; echo $num2-\u003ea",
+      "Text": "Hãy cho biết output của đoạn chương trình sau:class Abc { public $a = 6; public function __construct($b) { $a = $b + 3; } } $num1 = new Abc(4); $num2 = clone $num1; echo $num2->a",
       "Marks": 1,
       "AnswerId": 107409,
       "Answers": [
@@ -8512,7 +8526,7 @@
     },
     {
       "Id": 25930,
-      "Text": "//Giả sử hiện tại là 1:04:06 sáng ngày 18/02/2012$now = strtotime(\u0027-2 hour\u0027);$date = getdate($now);$a = $date[\u0027day\u0027];echo $a;Kết quả hiện ra màn hình là gì",
+      "Text": "//Giả sử hiện tại là 1:04:06 sáng ngày 18/02/2012$now = strtotime('-2 hour');$date = getdate($now);$a = $date['day'];echo $a;Kết quả hiện ra màn hình là gì",
       "Marks": 1,
       "AnswerId": 107412,
       "Answers": [
@@ -8584,7 +8598,7 @@
     },
     {
       "Id": 25933,
-      "Text": "$m = array(\u0027a\u0027, \u0027b\u0027, \u0027c\u0027, \u0027d\u0027);echo array_shift($m); Kết quả hiện lên màn hình là gì",
+      "Text": "$m = array('a', 'b', 'c', 'd');echo array_shift($m); Kết quả hiện lên màn hình là gì",
       "Marks": 1,
       "AnswerId": 107425,
       "Answers": [
@@ -8608,7 +8622,7 @@
     },
     {
       "Id": 25934,
-      "Text": "$name = \u0027a|b|c|d\u0027;$name1 = explode(\u0027|\u0027, $name);$name2 = implode(\u0027 \u0027, $name1);echo $name2;Kết quả hiện lên màn hình là gì",
+      "Text": "$name = 'a|b|c|d';$name1 = explode('|', $name);$name2 = implode(' ', $name1);echo $name2;Kết quả hiện lên màn hình là gì",
       "Marks": 1,
       "AnswerId": 107427,
       "Answers": [
@@ -8632,7 +8646,7 @@
     },
     {
       "Id": 25935,
-      "Text": "$now = mktime(1, 2, 3, 4, 5, 2012);echo getdate($now)[\u0027hour\u0027];Kết quả hiện ra màn hình là gì",
+      "Text": "$now = mktime(1, 2, 3, 4, 5, 2012);echo getdate($now)['hour'];Kết quả hiện ra màn hình là gì",
       "Marks": 1,
       "AnswerId": 107432,
       "Answers": [
@@ -8656,7 +8670,7 @@
     },
     {
       "Id": 25936,
-      "Text": "$a = 5;$mess = \u0027Gia tri cua a la: $a\u0027;echo $mess;Kết quả hiện lên màn hình là gì",
+      "Text": "$a = 5;$mess = 'Gia tri cua a la: $a';echo $mess;Kết quả hiện lên màn hình là gì",
       "Marks": 1,
       "AnswerId": 107436,
       "Answers": [
@@ -8704,7 +8718,7 @@
     },
     {
       "Id": 25938,
-      "Text": "$name = \u0027a|b|c|d\u0027;$name1 = explode(\u0027|\u0027, $name);$name2 = implode(\u0027 \u0027, $name);echo $name2;Kết quả hiện lên màn hình là gì",
+      "Text": "$name = 'a|b|c|d';$name1 = explode('|', $name);$name2 = implode(' ', $name);echo $name2;Kết quả hiện lên màn hình là gì",
       "Marks": 1,
       "AnswerId": 107443,
       "Answers": [
@@ -8728,7 +8742,7 @@
     },
     {
       "Id": 25939,
-      "Text": "$m = array(\u0027a\u0027=\u003e\u00271\u0027, \u0027b\u0027=\u003e\u00272\u0027, \u0027c\u0027=\u003e\u00273\u0027, \u0027d\u0027=\u003e\u00274\u0027);echo array_pop($m);Kết quả hiện lên màn hình là gì",
+      "Text": "$m = array('a'=>'1', 'b'=>'2', 'c'=>'3', 'd'=>'4');echo array_pop($m);Kết quả hiện lên màn hình là gì",
       "Marks": 1,
       "AnswerId": 107449,
       "Answers": [
@@ -8752,7 +8766,7 @@
     },
     {
       "Id": 25940,
-      "Text": "\u003cselect name=\u0027a[]\u0027 multiple=\u0027multiple\u0027\u003e \u003coption value=\u0027b\u0027\u003e1\u003c/option\u003e \u003coption value=\u0027c\u0027\u003e2\u003c/option\u003e\u003c/select\u003e Biết rằng người dùng đã chọn lựa chọn thứ 1. Hỏi dòng mã echo $POST[\u0027a\u0027][0] cho kết quả là gì (form có method là POST)",
+      "Text": "<select name='a[]' multiple='multiple'> <option value='b'>1</option> <option value='c'>2</option></select> Biết rằng người dùng đã chọn lựa chọn thứ 1. Hỏi dòng mã echo $POST['a'][0] cho kết quả là gì (form có method là POST)",
       "Marks": 1,
       "AnswerId": 107454,
       "Answers": [
@@ -8776,17 +8790,17 @@
     },
     {
       "Id": 25941,
-      "Text": "\u003ctextarea name=\u0027a\u0027 rows=\u00273\u0027 cols=\u002750\u0027\u003eabc def\u003c/textarea\u003e Để lấy giá trị của đối tượng textarea và gán cho biến $a (form method là POST) thì cần dùng cú pháp nào sau đây",
+      "Text": "<textarea name='a' rows='3' cols='50'>abc def</textarea> Để lấy giá trị của đối tượng textarea và gán cho biến $a (form method là POST) thì cần dùng cú pháp nào sau đây",
       "Marks": 1,
       "AnswerId": 107456,
       "Answers": [
         {
           "Id": 107455,
-          "Text": "$a = getvalue(POST[\u0027a\u0027])"
+          "Text": "$a = getvalue(POST['a'])"
         },
         {
           "Id": 107456,
-          "Text": "$a = $_POST[\u0027a\u0027]"
+          "Text": "$a = $_POST['a']"
         },
         {
           "Id": 107457,
@@ -8794,13 +8808,13 @@
         },
         {
           "Id": 107458,
-          "Text": "$a = getvalue(POST[\u0027a\u0027], 3, 50)"
+          "Text": "$a = getvalue(POST['a'], 3, 50)"
         }
       ]
     },
     {
       "Id": 25942,
-      "Text": "Giả sử đối tượng textarea có name=\u0027a\u0027 và người dùng nhập vào đó đoạn văn bản sau:abcdefHỏi sau khi người dùng submit (POST) thì dòng lệnh echo $_POST[\u0027a\u0027] hiển thị kết quả là gì",
+      "Text": "Giả sử đối tượng textarea có name='a' và người dùng nhập vào đó đoạn văn bản sau:abcdefHỏi sau khi người dùng submit (POST) thì dòng lệnh echo $_POST['a'] hiển thị kết quả là gì",
       "Marks": 1,
       "AnswerId": 107459,
       "Answers": [
@@ -8848,7 +8862,7 @@
     },
     {
       "Id": 25944,
-      "Text": "\"Giả sử đối tượng textarea có name=\u0027a\u0027 và người dùng nhập vào đó đoạn văn bản sau: abc\u0026nbsp;def Hỏi sau khi người dùng submit (POST) thì dòng lệnh echo $_POST[\u0027a\u0027] hiển thị kết quả là gì?",
+      "Text": "\"Giả sử đối tượng textarea có name='a' và người dùng nhập vào đó đoạn văn bản sau: abc&nbsp;def Hỏi sau khi người dùng submit (POST) thì dòng lệnh echo $_POST['a'] hiển thị kết quả là gì?",
       "Marks": 1,
       "AnswerId": 107467,
       "Answers": [
@@ -8882,21 +8896,21 @@
         },
         {
           "Id": 107472,
-          "Text": "print (\u0027abcdef\u0027)"
+          "Text": "print ('abcdef')"
         },
         {
           "Id": 107473,
-          "Text": "print \u0027abc\u0027,\u0027def\u0027"
+          "Text": "print 'abc','def'"
         },
         {
           "Id": 107474,
-          "Text": "print \u0027abcdef\u0027"
+          "Text": "print 'abcdef'"
         }
       ]
     },
     {
       "Id": 25946,
-      "Text": "\u003cselect name=\u0027a[]\u0027 multiple=\u0027multiple\u0027\u003e \u003coption value=\u0027b\u0027\u003e1\u003c/option\u003e \u003coption value=\u0027c\u0027\u003e2\u003c/option\u003e\u003c/select\u003e Biết rằng người dùng đã chọn lựa chọn thứ 2. Hỏi dòng mã echo $_POST[\u0027a\u0027] cho kết quả là gì (form có method là POST)",
+      "Text": "<select name='a[]' multiple='multiple'> <option value='b'>1</option> <option value='c'>2</option></select> Biết rằng người dùng đã chọn lựa chọn thứ 2. Hỏi dòng mã echo $_POST['a'] cho kết quả là gì (form có method là POST)",
       "Marks": 1,
       "AnswerId": 107475,
       "Answers": [
@@ -8920,17 +8934,17 @@
     },
     {
       "Id": 25947,
-      "Text": "\u003cinput name=\u0027a\u0027 type=\u0027radio\u0027 value=\u0027visa\u0027\u003e \u003cinput name=\u0027a\u0027 type=\u0027radio\u0027 value=\u0027mastercard\u0027\u003e Để lấy dữ liệu của nhóm radio button trên lưu vào biến $b (gửi bằng phương thức POST)thì dùng cấu trúc nào sau đây?",
+      "Text": "<input name='a' type='radio' value='visa'> <input name='a' type='radio' value='mastercard'> Để lấy dữ liệu của nhóm radio button trên lưu vào biến $b (gửi bằng phương thức POST)thì dùng cấu trúc nào sau đây?",
       "Marks": 1,
       "AnswerId": 107481,
       "Answers": [
         {
           "Id": 107479,
-          "Text": "$b = POST[\u0027visa\u0027]"
+          "Text": "$b = POST['visa']"
         },
         {
           "Id": 107480,
-          "Text": "$b = \u0027a\u0027"
+          "Text": "$b = 'a'"
         },
         {
           "Id": 107481,
@@ -8938,7 +8952,7 @@
         },
         {
           "Id": 107482,
-          "Text": "$b = POST[\u0027mastercard\u0027]"
+          "Text": "$b = POST['mastercard']"
         }
       ]
     },
@@ -8974,7 +8988,7 @@
       "Answers": [
         {
           "Id": 107487,
-          "Text": "($a \u003e 1)? echo (\u0027a\u0027) : echo (\u0027b\u0027)"
+          "Text": "($a > 1)? echo ('a') : echo ('b')"
         },
         {
           "Id": 107488,
@@ -8982,11 +8996,11 @@
         },
         {
           "Id": 107489,
-          "Text": "($a \u003e 1)? print (\u0027a\u0027) : print (\u0027b\u0027)"
+          "Text": "($a > 1)? print ('a') : print ('b')"
         },
         {
           "Id": 107490,
-          "Text": "($a \u003e 1)? echo \u0027a\u0027 : print \u0027b\u0027"
+          "Text": "($a > 1)? echo 'a' : print 'b'"
         }
       ]
     },
@@ -9800,7 +9814,7 @@
       "Answers": [
         {
           "Id": 105991,
-          "Text": "Ngay trong mục \u003chead\u003e của trang HTML"
+          "Text": "Ngay trong mục <head> của trang HTML"
         },
         {
           "Id": 105992,
@@ -9818,7 +9832,7 @@
     },
     {
       "Id": 25595,
-      "Text": "Để khi liên kết, mở ra cho người dung một Tab/ Cửa sổ làm việc mới thì trong thẻ \u003ca\u003e thuộc tính target người dung lựa chọn giá trị:",
+      "Text": "Để khi liên kết, mở ra cho người dung một Tab/ Cửa sổ làm việc mới thì trong thẻ <a> thuộc tính target người dung lựa chọn giá trị:",
       "Marks": 1,
       "AnswerId": 105997,
       "Answers": [
@@ -9866,7 +9880,7 @@
     },
     {
       "Id": 25597,
-      "Text": "Thẻ \u003cfont\u003e và Css đều có khả năng áp dụng style nhất quán lên các thành phần trên một hoặc toàn bộ các trang web của một website",
+      "Text": "Thẻ <font> và Css đều có khả năng áp dụng style nhất quán lên các thành phần trên một hoặc toàn bộ các trang web của một website",
       "Marks": 1,
       "AnswerId": 106003,
       "Answers": [
@@ -9912,19 +9926,19 @@
       "Answers": [
         {
           "Id": 106009,
-          "Text": "\u003ca\u003e"
+          "Text": "<a>"
         },
         {
           "Id": 106010,
-          "Text": "\u003ccss\u003e"
+          "Text": "<css>"
         },
         {
           "Id": 106011,
-          "Text": "\u003cstyle\u003e"
+          "Text": "<style>"
         },
         {
           "Id": 106012,
-          "Text": "\u003clink\u003e"
+          "Text": "<link>"
         }
       ]
     },
@@ -10422,7 +10436,7 @@
     },
     {
       "Id": 25622,
-      "Text": "Để thay đổi kích cỡ chữ của đoạn chữ nằm trong thẻ \u003cfont\u003e ở cửa sổ code view, người thiết kế phải thay đổi giá trị của thuộc tính nào ?",
+      "Text": "Để thay đổi kích cỡ chữ của đoạn chữ nằm trong thẻ <font> ở cửa sổ code view, người thiết kế phải thay đổi giá trị của thuộc tính nào ?",
       "Marks": 1,
       "AnswerId": 106093,
       "Answers": [
@@ -10486,7 +10500,7 @@
     },
     {
       "Id": 25625,
-      "Text": "Trên cửa sổ code view, chọn File -\u003e Validate -\u003e Markup, chuyện gì sẽ xảy ra",
+      "Text": "Trên cửa sổ code view, chọn File -> Validate -> Markup, chuyện gì sẽ xảy ra",
       "Marks": 1,
       "AnswerId": 106104,
       "Answers": [
@@ -11078,7 +11092,7 @@
     },
     {
       "Id": 25651,
-      "Text": "Thẻ \u003cmeta\u003e cho phép điều gì xảy ra?",
+      "Text": "Thẻ <meta> cho phép điều gì xảy ra?",
       "Marks": 1,
       "AnswerId": 106201,
       "Answers": [
@@ -11212,15 +11226,15 @@
       "Answers": [
         {
           "Id": 106218,
-          "Text": "\u003clayer\u003e\u003c/layer\u003e"
+          "Text": "<layer></layer>"
         },
         {
           "Id": 106219,
-          "Text": "\u003cshow\u003e\u003c/show\u003e"
+          "Text": "<show></show>"
         },
         {
           "Id": 106220,
-          "Text": "\u003ctitle\u003e\u003c/title\u003e"
+          "Text": "<title></title>"
         },
         {
           "Id": 106221,
@@ -16802,7 +16816,7 @@
     },
     {
       "Id": 25247,
-      "Text": "Để bật Javascript, gọi : myWebView.setSettings().setJavaScriptEnabled(true); đối với đối tượng WebView\u003e, điều này đúng hay sai?",
+      "Text": "Để bật Javascript, gọi : myWebView.setSettings().setJavaScriptEnabled(true); đối với đối tượng WebView>, điều này đúng hay sai?",
       "Marks": 1,
       "AnswerId": 104659,
       "Answers": [
@@ -17506,19 +17520,19 @@
       "Answers": [
         {
           "Id": 107631,
-          "Text": "\u003casp:HyperLink ID=\"HyperLink1\" runat=\"server\" ImageUrl=\"home.gif\" NavigateUrl=\"index.apsx\"\u003eTrang chủ\u003c/asp:HyperLink\u003e"
+          "Text": "<asp:HyperLink ID=\"HyperLink1\" runat=\"server\" ImageUrl=\"home.gif\" NavigateUrl=\"index.apsx\">Trang chủ</asp:HyperLink>"
         },
         {
           "Id": 107632,
-          "Text": "\u003casp:HyperLink ID=\"HyperLink1\" runat=\"server\" ImageUrl=\"home.gif\" href=\"index.apsx\" text= “Trang chủ”\u003e\u003c/asp:HyperLink\u003e"
+          "Text": "<asp:HyperLink ID=\"HyperLink1\" runat=\"server\" ImageUrl=\"home.gif\" href=\"index.apsx\" text= “Trang chủ”></asp:HyperLink>"
         },
         {
           "Id": 107633,
-          "Text": "\u003casp:HyperLink ID=\"HyperLink1\" runat=\"server\" Image=\"home.gif\" href =\"index.apsx\"\u003eTrang chủ\u003c/asp:HyperLink\u003e"
+          "Text": "<asp:HyperLink ID=\"HyperLink1\" runat=\"server\" Image=\"home.gif\" href =\"index.apsx\">Trang chủ</asp:HyperLink>"
         },
         {
           "Id": 107634,
-          "Text": "\u003casp:HyperLink ID=\"HyperLink1\" runat=\"server\" Image=\"home.gif\" NavigateUrl=\"index.apsx\" text= “Trang chủ”\u003e\u003c/asp:HyperLink\u003e"
+          "Text": "<asp:HyperLink ID=\"HyperLink1\" runat=\"server\" Image=\"home.gif\" NavigateUrl=\"index.apsx\" text= “Trang chủ”></asp:HyperLink>"
         }
       ]
     },
@@ -17866,19 +17880,19 @@
       "Answers": [
         {
           "Id": 107691,
-          "Text": "Thêm phần tử Theme vào file web.config. Chỉ định giá trị thuộc tính fileName bằng tên Theme         \u003csystem.web\u003e                   \u003ctheme fileName=\"ThemeName\" /\u003e         \u003c/system.web\u003e"
+          "Text": "Thêm phần tử Theme vào file web.config. Chỉ định giá trị thuộc tính fileName bằng tên Theme         <system.web>                   <theme fileName=\"ThemeName\" />         </system.web>"
         },
         {
           "Id": 107692,
-          "Text": "Thêm thuộc tính Theme vào chỉ dẫn Page     \u003c%@ Page=\"\" Language=\"C#\" Theme=\" ThemeName\" %\u003e"
+          "Text": "Thêm thuộc tính Theme vào chỉ dẫn Page     <%@ Page=\"\" Language=\"C#\" Theme=\" ThemeName\" %>"
         },
         {
           "Id": 107693,
-          "Text": "Thêm thuộc tính Skin vào chỉ dẫn Page     \u003c%@ Page=\"\" Language=\"C#\" Skin=\" ThemeName\" %\u003e"
+          "Text": "Thêm thuộc tính Skin vào chỉ dẫn Page     <%@ Page=\"\" Language=\"C#\" Skin=\" ThemeName\" %>"
         },
         {
           "Id": 107694,
-          "Text": "Thêm phần tử Pages vào file web.config. Chỉ định giá trị thuộc tính Theme bằng tên Theme         \u003csystem.web\u003e                   \u003cpages theme=\"ThemeName\" /\u003e         \u003c/system.web\u003e"
+          "Text": "Thêm phần tử Pages vào file web.config. Chỉ định giá trị thuộc tính Theme bằng tên Theme         <system.web>                   <pages theme=\"ThemeName\" />         </system.web>"
         }
       ]
     },
@@ -18124,7 +18138,7 @@
     },
     {
       "Id": 26011,
-      "Text": "Giả sử bạn đã thiết lập một chuỗi kết nối trong file web.config với tên “demoConnectionString” trong thẻ \"\u003cconnectionStrings\u003e\" Câu lệnh nào trong lớp code-behind để lấy thông tin chuỗi kết nối?",
+      "Text": "Giả sử bạn đã thiết lập một chuỗi kết nối trong file web.config với tên “demoConnectionString” trong thẻ \"<connectionStrings>\" Câu lệnh nào trong lớp code-behind để lấy thông tin chuỗi kết nối?",
       "Marks": 1,
       "AnswerId": 107738,
       "Answers": [
@@ -18754,19 +18768,19 @@
       "Answers": [
         {
           "Id": 107839,
-          "Text": "3-\u003e2-\u003e1-\u003e5-\u003e4"
+          "Text": "3->2->1->5->4"
         },
         {
           "Id": 107840,
-          "Text": "1-\u003e2-\u003e3-\u003e4-\u003e5"
+          "Text": "1->2->3->4->5"
         },
         {
           "Id": 107841,
-          "Text": "2-\u003e1-\u003e3-\u003e5-\u003e4"
+          "Text": "2->1->3->5->4"
         },
         {
           "Id": 107842,
-          "Text": "1-\u003e2-\u003e3-\u003e5-\u003e4"
+          "Text": "1->2->3->5->4"
         }
       ]
     },
@@ -18826,15 +18840,15 @@
       "Answers": [
         {
           "Id": 107851,
-          "Text": "\u003clinked href=\"my_style_sheet.css\" media=\"screen\" rel=\"stylesheet\"  type=\"text/css\"  /\u003e"
+          "Text": "<linked href=\"my_style_sheet.css\" media=\"screen\" rel=\"stylesheet\"  type=\"text/css\"  />"
         },
         {
           "Id": 107852,
-          "Text": "\u003clink href=\"my_style_sheet.css\" media=\"screen\" rel=\"stylesheet\"  type=\"text/css\"  /\u003e"
+          "Text": "<link href=\"my_style_sheet.css\" media=\"screen\" rel=\"stylesheet\"  type=\"text/css\"  />"
         },
         {
           "Id": 107853,
-          "Text": "\u003clink href=\"my_style_sheet.css\" media=\"screen\" type=\"text/css\"  /\u003e"
+          "Text": "<link href=\"my_style_sheet.css\" media=\"screen\" type=\"text/css\"  />"
         },
         {
           "Id": 107854,
@@ -19716,19 +19730,19 @@
       "Answers": [
         {
           "Id": 105407,
-          "Text": "GameObject=\u003eProperties=\u003eComponents"
+          "Text": "GameObject=>Properties=>Components"
         },
         {
           "Id": 105408,
-          "Text": "Properties=\u003eComponents=\u003eGameObject"
+          "Text": "Properties=>Components=>GameObject"
         },
         {
           "Id": 105409,
-          "Text": "GameObject=\u003eComponents=\u003eProperties"
+          "Text": "GameObject=>Components=>Properties"
         },
         {
           "Id": 105410,
-          "Text": "Components=\u003eGameObject=\u003eProperties"
+          "Text": "Components=>GameObject=>Properties"
         }
       ]
     },
@@ -20532,19 +20546,19 @@
       "Answers": [
         {
           "Id": 105543,
-          "Text": "Start() =\u003eWillRender =\u003e Update =\u003e OnDestroy"
+          "Text": "Start() =>WillRender => Update => OnDestroy"
         },
         {
           "Id": 105544,
-          "Text": "Start() =\u003e Update =\u003eWillRender =\u003e OnDestroy"
+          "Text": "Start() => Update =>WillRender => OnDestroy"
         },
         {
           "Id": 105545,
-          "Text": "Start() =\u003eWillRender =\u003e OnDestroy=\u003e Update"
+          "Text": "Start() =>WillRender => OnDestroy=> Update"
         },
         {
           "Id": 105546,
-          "Text": "Start() =\u003eWillRender =\u003e Update =\u003e OnDestroy"
+          "Text": "Start() =>WillRender => Update => OnDestroy"
         }
       ]
     },
@@ -22910,27 +22924,27 @@
       "Answers": [
         {
           "Id": 106846,
-          "Text": "\u003cyoutube\u003e"
+          "Text": "<youtube>"
         },
         {
           "Id": 106847,
-          "Text": "\u003cmedia\u003e"
+          "Text": "<media>"
         },
         {
           "Id": 106848,
-          "Text": "\u003cclip\u003e"
+          "Text": "<clip>"
         },
         {
           "Id": 106849,
-          "Text": "\u003cvideo\u003e"
+          "Text": "<video>"
         },
         {
           "Id": 106850,
-          "Text": "\u003ccanvas\u003e"
+          "Text": "<canvas>"
         },
         {
           "Id": 106851,
-          "Text": "\u003cfilm\u003e"
+          "Text": "<film>"
         }
       ]
     },
@@ -22942,27 +22956,27 @@
       "Answers": [
         {
           "Id": 106852,
-          "Text": "\u003cdiv class=\"head\"\u003e\u003c/div\u003e"
+          "Text": "<div class=\"head\"></div>"
         },
         {
           "Id": 106853,
-          "Text": "\u003cdiv class=\"header\"\u003e\u003c/div\u003e"
+          "Text": "<div class=\"header\"></div>"
         },
         {
           "Id": 106854,
-          "Text": "\u003chead\u003e\u003c/head\u003e"
+          "Text": "<head></head>"
         },
         {
           "Id": 106855,
-          "Text": "\u003cdiv id=\"head\"\u003e\u003c/div\u003e"
+          "Text": "<div id=\"head\"></div>"
         },
         {
           "Id": 106856,
-          "Text": "\u003cdiv id=\"header\"\u003e\u003c/div\u003e"
+          "Text": "<div id=\"header\"></div>"
         },
         {
           "Id": 106857,
-          "Text": "\u003cheader\u003e\u003c/header\u003e"
+          "Text": "<header></header>"
         }
       ]
     },
@@ -22974,27 +22988,27 @@
       "Answers": [
         {
           "Id": 106858,
-          "Text": "\u003cp\u003e"
+          "Text": "<p>"
         },
         {
           "Id": 106859,
-          "Text": "\u003caudio\u003e"
+          "Text": "<audio>"
         },
         {
           "Id": 106860,
-          "Text": "\u003cdraw\u003e"
+          "Text": "<draw>"
         },
         {
           "Id": 106861,
-          "Text": "\u003cvideo\u003e"
+          "Text": "<video>"
         },
         {
           "Id": 106862,
-          "Text": "\u003ccanvas\u003e"
+          "Text": "<canvas>"
         },
         {
           "Id": 106863,
-          "Text": "\u003cdiv\u003e"
+          "Text": "<div>"
         }
       ]
     },
@@ -23230,55 +23244,55 @@
       "Answers": [
         {
           "Id": 106906,
-          "Text": "\u003c!DOCTYPE html PUBLIC \u003e"
+          "Text": "<!DOCTYPE html PUBLIC >"
         },
         {
           "Id": 106907,
-          "Text": "\u003c!DOCTYPE html\u003e"
+          "Text": "<!DOCTYPE html>"
         },
         {
           "Id": 106908,
-          "Text": "\u003c!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 5.0 Transitional//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd\"\u003e"
+          "Text": "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 5.0 Transitional//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd\">"
         },
         {
           "Id": 106909,
-          "Text": "\u003c!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Transitional//EN\" \u003e"
+          "Text": "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Transitional//EN\" >"
         },
         {
           "Id": 106910,
-          "Text": "\u003c!DOCTYPE html5\u003e"
+          "Text": "<!DOCTYPE html5>"
         }
       ]
     },
     {
       "Id": 25831,
-      "Text": "Đâu là phát biểu đúng về phần tử \u003cheader\u003e trong HTML5?",
+      "Text": "Đâu là phát biểu đúng về phần tử <header> trong HTML5?",
       "Marks": 1,
       "AnswerId": 106912,
       "Answers": [
         {
           "Id": 106911,
-          "Text": "Phần tử \u003cheader\u003e được sử dụng tối đa 5 lần trên trang"
+          "Text": "Phần tử <header> được sử dụng tối đa 5 lần trên trang"
         },
         {
           "Id": 106912,
-          "Text": "Phần tử \u003cheader\u003e được sử dụng nhiều lần trên trang"
+          "Text": "Phần tử <header> được sử dụng nhiều lần trên trang"
         },
         {
           "Id": 106913,
-          "Text": "Phần tử \u003cheader\u003e được sử dụng tối đa 2 lần trên trang"
+          "Text": "Phần tử <header> được sử dụng tối đa 2 lần trên trang"
         },
         {
           "Id": 106914,
-          "Text": "Phần tử \u003cheader\u003e bắt buộc phải được khai báo ở phía dưới cùng đoạn mã trang"
+          "Text": "Phần tử <header> bắt buộc phải được khai báo ở phía dưới cùng đoạn mã trang"
         },
         {
           "Id": 106915,
-          "Text": "Phần tử \u003cheader\u003e được sử dụng tối đa 3 lần trên trang"
+          "Text": "Phần tử <header> được sử dụng tối đa 3 lần trên trang"
         },
         {
           "Id": 106916,
-          "Text": "Phần tử \u003cheader\u003e chỉ được sử dụng một lần trên trang"
+          "Text": "Phần tử <header> chỉ được sử dụng một lần trên trang"
         }
       ]
     },
@@ -23290,27 +23304,27 @@
       "Answers": [
         {
           "Id": 106917,
-          "Text": "\u003cinput font=\"datetime\" name=\"bdaytime\"\u003e"
+          "Text": "<input font=\"datetime\" name=\"bdaytime\">"
         },
         {
           "Id": 106918,
-          "Text": "\u003cinput type=\"datetime\" name=\"bdaytime\"\u003e"
+          "Text": "<input type=\"datetime\" name=\"bdaytime\">"
         },
         {
           "Id": 106919,
-          "Text": "\u003cinput style=\"datetime\" name=\"bdaytime\"\u003e"
+          "Text": "<input style=\"datetime\" name=\"bdaytime\">"
         },
         {
           "Id": 106920,
-          "Text": "\u003cinput id=\"datetime\" name=\"bdaytime\"\u003e"
+          "Text": "<input id=\"datetime\" name=\"bdaytime\">"
         },
         {
           "Id": 106921,
-          "Text": "\u003cinput for=\"datetime\" name=\"bdaytime\"\u003e"
+          "Text": "<input for=\"datetime\" name=\"bdaytime\">"
         },
         {
           "Id": 106922,
-          "Text": "\u003cinput format=\"datetime\" name=\"bdaytime\"\u003e"
+          "Text": "<input format=\"datetime\" name=\"bdaytime\">"
         }
       ]
     },
@@ -23354,27 +23368,27 @@
       "Answers": [
         {
           "Id": 106929,
-          "Text": "\u003chgroup\u003e"
+          "Text": "<hgroup>"
         },
         {
           "Id": 106930,
-          "Text": "\u003chheader\u003e"
+          "Text": "<hheader>"
         },
         {
           "Id": 106931,
-          "Text": "\u003chembedded\u003e"
+          "Text": "<hembedded>"
         },
         {
           "Id": 106932,
-          "Text": "\u003chsession\u003e"
+          "Text": "<hsession>"
         },
         {
           "Id": 106933,
-          "Text": "\u003chcontent\u003e"
+          "Text": "<hcontent>"
         },
         {
           "Id": 106934,
-          "Text": "\u003chbody\u003e"
+          "Text": "<hbody>"
         }
       ]
     },
@@ -23418,27 +23432,27 @@
       "Answers": [
         {
           "Id": 106941,
-          "Text": "\u003cbrand\u003e"
+          "Text": "<brand>"
         },
         {
           "Id": 106942,
-          "Text": "\u003ctext\u003e"
+          "Text": "<text>"
         },
         {
           "Id": 106943,
-          "Text": "\u003clabel\u003e"
+          "Text": "<label>"
         },
         {
           "Id": 106944,
-          "Text": "\u003cinput\u003e"
+          "Text": "<input>"
         },
         {
           "Id": 106945,
-          "Text": "\u003csubmit\u003e"
+          "Text": "<submit>"
         },
         {
           "Id": 106946,
-          "Text": "\u003ctop input\u003e"
+          "Text": "<top input>"
         }
       ]
     },
@@ -23450,27 +23464,27 @@
       "Answers": [
         {
           "Id": 106947,
-          "Text": "\u003clabel name=\"male\"\u003eMale\u003c/label\u003e"
+          "Text": "<label name=\"male\">Male</label>"
         },
         {
           "Id": 106948,
-          "Text": "\u003clabel type=\"label\"\u003eMale\u003c/label\u003e"
+          "Text": "<label type=\"label\">Male</label>"
         },
         {
           "Id": 106949,
-          "Text": "\u003clabel for=\"male\"\u003eMale\u003c/label\u003e"
+          "Text": "<label for=\"male\">Male</label>"
         },
         {
           "Id": 106950,
-          "Text": "\u003clabel font=\"arial\"\u003eMale\u003c/label\u003e"
+          "Text": "<label font=\"arial\">Male</label>"
         },
         {
           "Id": 106951,
-          "Text": "\u003clabel id=\"male\"\u003eMale\u003c/label\u003e"
+          "Text": "<label id=\"male\">Male</label>"
         },
         {
           "Id": 106952,
-          "Text": "\u003clabel color=\"red\"\u003eMale\u003c/label\u003e"
+          "Text": "<label color=\"red\">Male</label>"
         }
       ]
     },
@@ -23482,27 +23496,27 @@
       "Answers": [
         {
           "Id": 106953,
-          "Text": "\u003cfieldstyle\u003e"
+          "Text": "<fieldstyle>"
         },
         {
           "Id": 106954,
-          "Text": "\u003cfieldshow\u003e"
+          "Text": "<fieldshow>"
         },
         {
           "Id": 106955,
-          "Text": "\u003cfieldrow\u003e"
+          "Text": "<fieldrow>"
         },
         {
           "Id": 106956,
-          "Text": "\u003cfieldcolumn\u003e"
+          "Text": "<fieldcolumn>"
         },
         {
           "Id": 106957,
-          "Text": "\u003cfieldset\u003e"
+          "Text": "<fieldset>"
         },
         {
           "Id": 106958,
-          "Text": "\u003cfieldground\u003e"
+          "Text": "<fieldground>"
         }
       ]
     },
@@ -23514,27 +23528,27 @@
       "Answers": [
         {
           "Id": 106959,
-          "Text": "\u003ccharset\u003eunicode\u003c/charset\u003e"
+          "Text": "<charset>unicode</charset>"
         },
         {
           "Id": 106960,
-          "Text": "\u003cmeta\u003echarset=\"utf-8\"\u003c/meta\u003e"
+          "Text": "<meta>charset=\"utf-8\"</meta>"
         },
         {
           "Id": 106961,
-          "Text": "\u003ccharset\u003eutf-8\u003c/charset\u003e"
+          "Text": "<charset>utf-8</charset>"
         },
         {
           "Id": 106962,
-          "Text": "\u003cmeta style=\"utf-8\"\u003e\u003c/meta\u003e"
+          "Text": "<meta style=\"utf-8\"></meta>"
         },
         {
           "Id": 106963,
-          "Text": "\u003cmeta charset=\"utf-8\"\u003e\u003c/meta\u003e"
+          "Text": "<meta charset=\"utf-8\"></meta>"
         },
         {
           "Id": 106964,
-          "Text": "\u003cmeta\u003echarset=\"unicode\"\u003c/meta\u003e"
+          "Text": "<meta>charset=\"unicode\"</meta>"
         }
       ]
     },
@@ -23604,7 +23618,7 @@
     },
     {
       "Id": 25842,
-      "Text": "Câu lệnh Jquery nào để thiết lập độ cao cho tất cả phần tử \u003cdiv\u003e là 100 pixel",
+      "Text": "Câu lệnh Jquery nào để thiết lập độ cao cho tất cả phần tử <div> là 100 pixel",
       "Marks": 1,
       "AnswerId": 106980,
       "Answers": [
@@ -23700,7 +23714,7 @@
     },
     {
       "Id": 25845,
-      "Text": "Hàm sau có tác dụng như thế nào? \u003cscript\u003efunction displayShow(){document.getElementById(\"demo\").innerHTML=Date();}\u003c/script\u003e",
+      "Text": "Hàm sau có tác dụng như thế nào? <script>function displayShow(){document.getElementById(\"demo\").innerHTML=Date();}</script>",
       "Marks": 1,
       "AnswerId": 106997,
       "Answers": [
@@ -23764,7 +23778,7 @@
     },
     {
       "Id": 25847,
-      "Text": "Trong dòng mã sau:\u003cinput type=\"button\" onclick=\"show\" value=\"Submit\"\u003eTừ khóa onclick nhằm tác dụng gì?",
+      "Text": "Trong dòng mã sau:<input type=\"button\" onclick=\"show\" value=\"Submit\">Từ khóa onclick nhằm tác dụng gì?",
       "Marks": 1,
       "AnswerId": 107010,
       "Answers": [
@@ -25442,7 +25456,7 @@
     },
     {
       "Id": 26132,
-      "Text": "\u0027throws\u0027 trong xử lý ngoại lệ là",
+      "Text": "'throws' trong xử lý ngoại lệ là",
       "Marks": 1,
       "AnswerId": 108289,
       "Answers": [
@@ -25472,25 +25486,25 @@
       "Answers": [
         {
           "Id": 108293,
-          "Text": "2 nhóm là \u0027error\u0027 và \u0027exception\u0027"
+          "Text": "2 nhóm là 'error' và 'exception'"
         },
         {
           "Id": 108294,
-          "Text": "2 nhóm là \u0027complier\u0027 and \u0027run\u0027"
+          "Text": "2 nhóm là 'complier' and 'run'"
         },
         {
           "Id": 108295,
-          "Text": "3 nhóm là \u0027checked\u0027, \u0027unchecked\u0027 and \u0027checking\u0027"
+          "Text": "3 nhóm là 'checked', 'unchecked' and 'checking'"
         },
         {
           "Id": 108296,
-          "Text": "2 nhóm là \u0027check\u0027 và \u0027unchecked\u0027"
+          "Text": "2 nhóm là 'check' và 'unchecked'"
         }
       ]
     },
     {
       "Id": 26134,
-      "Text": "Tất cả các \u0027sub\u0027 class của class RuntimeException vàError là các ngoại lệ:",
+      "Text": "Tất cả các 'sub' class của class RuntimeException vàError là các ngoại lệ:",
       "Marks": 1,
       "AnswerId": 108298,
       "Answers": [
@@ -25500,19 +25514,19 @@
         },
         {
           "Id": 108298,
-          "Text": "Ngoại lệ \u0027unchecked\u0027"
+          "Text": "Ngoại lệ 'unchecked'"
         },
         {
           "Id": 108299,
-          "Text": "Ngoại lệ \u0027ClassNotFoundException\u0027"
+          "Text": "Ngoại lệ 'ClassNotFoundException'"
         },
         {
           "Id": 108300,
-          "Text": "Ngoại lệ \u0027checked\u0027"
+          "Text": "Ngoại lệ 'checked'"
         },
         {
           "Id": 108301,
-          "Text": "Ngoại lệ \u0027FileNotFoundException\u0027"
+          "Text": "Ngoại lệ 'FileNotFoundException'"
         },
         {
           "Id": 108302,
@@ -25522,13 +25536,13 @@
     },
     {
       "Id": 26135,
-      "Text": "Các ngoại lệ \u0027check\u0027 là những ngoại lệ",
+      "Text": "Các ngoại lệ 'check' là những ngoại lệ",
       "Marks": 1,
       "AnswerId": 108306,
       "Answers": [
         {
           "Id": 108303,
-          "Text": "Được \u0027checked\u0027 bởi Java Virtual Machine"
+          "Text": "Được 'checked' bởi Java Virtual Machine"
         },
         {
           "Id": 108304,
@@ -25540,7 +25554,7 @@
         },
         {
           "Id": 108306,
-          "Text": "Được \u0027checked\u0027 bởi Java Compiler"
+          "Text": "Được 'checked' bởi Java Compiler"
         },
         {
           "Id": 108307,
@@ -25554,7 +25568,7 @@
     },
     {
       "Id": 26136,
-      "Text": "Class \u0027Throwable\u0027 là class để thực hiện các công việc",
+      "Text": "Class 'Throwable' là class để thực hiện các công việc",
       "Marks": 1,
       "AnswerId": 108309,
       "Answers": [
@@ -25610,7 +25624,7 @@
     },
     {
       "Id": 26138,
-      "Text": "Ngoại lệ \u0027InputMismatchException\u0027 xảy ra khi nào?",
+      "Text": "Ngoại lệ 'InputMismatchException' xảy ra khi nào?",
       "Marks": 1,
       "AnswerId": 108319,
       "Answers": [
@@ -25656,7 +25670,7 @@
         },
         {
           "Id": 108327,
-          "Text": "Chương trình có lỗi vì không có mệnh đề \u0027catch\u0027."
+          "Text": "Chương trình có lỗi vì không có mệnh đề 'catch'."
         },
         {
           "Id": 108328,
@@ -26036,7 +26050,7 @@
       "Answers": [
         {
           "Id": 108396,
-          "Text": "Các thread ở trạng thái \u0027chờ đợi\u0027 lẫn nhau dẫn đến tình trạng \u0027chờ đợi\u0027 mãi mãi"
+          "Text": "Các thread ở trạng thái 'chờ đợi' lẫn nhau dẫn đến tình trạng 'chờ đợi' mãi mãi"
         },
         {
           "Id": 108397,
@@ -26052,7 +26066,7 @@
         },
         {
           "Id": 108400,
-          "Text": "Các thread được \u0027đánh thức\u0027 bởi phương thức notifyAll()"
+          "Text": "Các thread được 'đánh thức' bởi phương thức notifyAll()"
         }
       ]
     },
@@ -26082,7 +26096,7 @@
     },
     {
       "Id": 26154,
-      "Text": "Phương thức nào được dùng để đăng ký một thread vào \u0027thread scheduler\u0027 ?",
+      "Text": "Phương thức nào được dùng để đăng ký một thread vào 'thread scheduler' ?",
       "Marks": 1,
       "AnswerId": 108407,
       "Answers": [
@@ -26114,7 +26128,7 @@
     },
     {
       "Id": 26155,
-      "Text": "Phương thức nào được dùng để đưa một thread vào trạng thái \u0027ready\u0027 ?",
+      "Text": "Phương thức nào được dùng để đưa một thread vào trạng thái 'ready' ?",
       "Marks": 1,
       "AnswerId": 108416,
       "Answers": [
@@ -26204,13 +26218,13 @@
         },
         {
           "Id": 108428,
-          "Text": "Kết nối 2 hay nhiều thread đang ở trạng thái \u0027waiting\u0027"
+          "Text": "Kết nối 2 hay nhiều thread đang ở trạng thái 'waiting'"
         }
       ]
     },
     {
       "Id": 26158,
-      "Text": "Phương thức nào được dùng để đưa một thread vào trạng thái \u0027sleeping\u0027 ?",
+      "Text": "Phương thức nào được dùng để đưa một thread vào trạng thái 'sleeping' ?",
       "Marks": 1,
       "AnswerId": 108431,
       "Answers": [
@@ -26242,7 +26256,7 @@
     },
     {
       "Id": 26159,
-      "Text": "Những method nào trong số các method sau đây làm cho một thread không còn ở trạng thái \u0027running\u00271. yield()2. wait()3. notify()4. notifyAll()5.sleep(100)6.aliveThread.join()7.Thread.killThread()",
+      "Text": "Những method nào trong số các method sau đây làm cho một thread không còn ở trạng thái 'running'1. yield()2. wait()3. notify()4. notifyAll()5.sleep(100)6.aliveThread.join()7.Thread.killThread()",
       "Marks": 1,
       "AnswerId": 108439,
       "Answers": [
@@ -27000,7 +27014,7 @@
         },
         {
           "Id": 108575,
-          "Text": "Các chương trình có giao diện đồ họa không cần phương thức main.Programs that do graphcis don\u0027t need a main."
+          "Text": "Các chương trình có giao diện đồ họa không cần phương thức main.Programs that do graphcis don't need a main."
         },
         {
           "Id": 108576,
@@ -27590,19 +27604,19 @@
       "Answers": [
         {
           "Id": 106540,
-          "Text": "\u003cscript\u003e\u003c/script\u003e"
+          "Text": "<script></script>"
         },
         {
           "Id": 106541,
-          "Text": "\u003cscripting\u003e/\u003cscripting\u003e"
+          "Text": "<scripting>/<scripting>"
         },
         {
           "Id": 106542,
-          "Text": "\u003cjs\u003e\u003c/js\u003e"
+          "Text": "<js></js>"
         },
         {
           "Id": 106543,
-          "Text": "\u003cJavaScript\u003e\u003c/JavaScript\u003e"
+          "Text": "<JavaScript></JavaScript>"
         }
       ]
     },
@@ -27730,7 +27744,7 @@
       "Answers": [
         {
           "Id": 106563,
-          "Text": "Sử dụng thẻ \u003cJavaScript\u003e mở với thuộc tính type=\"text/JavaScript\""
+          "Text": "Sử dụng thẻ <JavaScript> mở với thuộc tính type=\"text/JavaScript\""
         },
         {
           "Id": 106564,
@@ -27742,7 +27756,7 @@
         },
         {
           "Id": 106566,
-          "Text": "Sử dụng thẻ \u003cSCRIPT\u003e mở với thuộc tính type=\"text/JavaScript\""
+          "Text": "Sử dụng thẻ <SCRIPT> mở với thuộc tính type=\"text/JavaScript\""
         }
       ]
     },
@@ -27772,7 +27786,7 @@
     },
     {
       "Id": 25751,
-      "Text": "Phép toán (7 \u003e= 5) || (5 \u003e 5) trả về giá trị nào?",
+      "Text": "Phép toán (7 >= 5) || (5 > 5) trả về giá trị nào?",
       "Marks": 1,
       "AnswerId": 106572,
       "Answers": [
@@ -27802,7 +27816,7 @@
       "Answers": [
         {
           "Id": 106575,
-          "Text": "if (i \u003c\u003e 5) {}"
+          "Text": "if (i <> 5) {}"
         },
         {
           "Id": 106576,
@@ -27810,7 +27824,7 @@
         },
         {
           "Id": 106577,
-          "Text": "if i\u003c\u003e5 {}"
+          "Text": "if i<>5 {}"
         },
         {
           "Id": 106578,
@@ -28056,7 +28070,7 @@
     },
     {
       "Id": 25763,
-      "Text": "Trong JavaScript đoạn mã sau cho ra kết quả gì? \u003cscript\u003e function kiemtra(){ window.open(\"http://www.vnn.vn\",\"Chao\"); } \u003c/script\u003e \u003c/head\u003e \u003cbody onload =\"kiemtra()\"\u003e\u003c/body\u003e",
+      "Text": "Trong JavaScript đoạn mã sau cho ra kết quả gì? <script> function kiemtra(){ window.open(\"http://www.vnn.vn\",\"Chao\"); } </script> </head> <body onload =\"kiemtra()\"></body>",
       "Marks": 1,
       "AnswerId": 106619,
       "Answers": [
@@ -28114,7 +28128,7 @@
         },
         {
           "Id": 106627,
-          "Text": "while (i\u003c=10) {}"
+          "Text": "while (i<=10) {}"
         },
         {
           "Id": 106628,
@@ -28122,7 +28136,7 @@
         },
         {
           "Id": 106629,
-          "Text": "while (i\u003c=10;i++) {}"
+          "Text": "while (i<=10;i++) {}"
         }
       ]
     },
@@ -28446,19 +28460,19 @@
       "Answers": [
         {
           "Id": 106682,
-          "Text": "Sự trừu tượng hóa dữ liệu -\u003e Lập trình tuyến tính -\u003e Lập trình có cấu trúc -\u003e Lập trình hướng đối tượng"
+          "Text": "Sự trừu tượng hóa dữ liệu -> Lập trình tuyến tính -> Lập trình có cấu trúc -> Lập trình hướng đối tượng"
         },
         {
           "Id": 106683,
-          "Text": "Lập trình có cấu trúc -\u003e Sự trừu tượng hóa dữ liệu -\u003e Lập trình tuyến tính -\u003e Lập trình hướng đối tượng"
+          "Text": "Lập trình có cấu trúc -> Sự trừu tượng hóa dữ liệu -> Lập trình tuyến tính -> Lập trình hướng đối tượng"
         },
         {
           "Id": 106684,
-          "Text": "Lập trình tuyến tính -\u003e Lập trình có cấu trúc -\u003e Sự trừu tượng hóa dữ liệu -\u003e Lập trình hướng đối tượng"
+          "Text": "Lập trình tuyến tính -> Lập trình có cấu trúc -> Sự trừu tượng hóa dữ liệu -> Lập trình hướng đối tượng"
         },
         {
           "Id": 106685,
-          "Text": "Lập trình có cấu trúc -\u003e Lập trình tuyến tính -\u003e Sự trừu tượng hóa dữ liệu -\u003e Lập trình hướng đối tượng"
+          "Text": "Lập trình có cấu trúc -> Lập trình tuyến tính -> Sự trừu tượng hóa dữ liệu -> Lập trình hướng đối tượng"
         }
       ]
     },
@@ -28638,15 +28652,15 @@
       "Answers": [
         {
           "Id": 106714,
-          "Text": "\u003cstyle src=”mystyle.css”\u003e"
+          "Text": "<style src=”mystyle.css”>"
         },
         {
           "Id": 106715,
-          "Text": "\u003cstylesheet\u003emystyle.css\u003c/stylesheet\u003e"
+          "Text": "<stylesheet>mystyle.css</stylesheet>"
         },
         {
           "Id": 106716,
-          "Text": "\u003clink rel=”stylesheet” type=”text/css” href=”mystyle.css”\u003e"
+          "Text": "<link rel=”stylesheet” type=”text/css” href=”mystyle.css”>"
         },
         {
           "Id": 106717,
@@ -28694,11 +28708,11 @@
         },
         {
           "Id": 106724,
-          "Text": "\u003cp style=”text-size:bold”\u003e"
+          "Text": "<p style=”text-size:bold”>"
         },
         {
           "Id": 106725,
-          "Text": "\u003cp style=”font-size:bold”\u003e"
+          "Text": "<p style=”font-size:bold”>"
         }
       ]
     },
@@ -28710,19 +28724,19 @@
       "Answers": [
         {
           "Id": 106726,
-          "Text": "\u003cselect\u003e…\u003c/select\u003e"
+          "Text": "<select>…</select>"
         },
         {
           "Id": 106727,
-          "Text": "\u003cinput\u003e…\u003c/input\u003e"
+          "Text": "<input>…</input>"
         },
         {
           "Id": 106728,
-          "Text": "\u003cspan\u003e..\u003c/span\u003e"
+          "Text": "<span>..</span>"
         },
         {
           "Id": 106729,
-          "Text": "\u003cinsert\u003e…\u003c/insert\u003e"
+          "Text": "<insert>…</insert>"
         }
       ]
     },
@@ -28752,7 +28766,7 @@
     },
     {
       "Id": 25792,
-      "Text": "Thẻ \u003cinput type=”Submit” ...\u003e dùng để làm gì?",
+      "Text": "Thẻ <input type=”Submit” ...> dùng để làm gì?",
       "Marks": 1,
       "AnswerId": 106734,
       "Answers": [
@@ -28800,7 +28814,7 @@
     },
     {
       "Id": 25794,
-      "Text": "Thẻ \u003cinput type=”checkbox” ...\u003e dùng để làm gì?",
+      "Text": "Thẻ <input type=”checkbox” ...> dùng để làm gì?",
       "Marks": 1,
       "AnswerId": 106742,
       "Answers": [
@@ -28872,7 +28886,7 @@
     },
     {
       "Id": 25797,
-      "Text": "Thẻ \u003ctextarea rows= cols = ...\u003e\u003c/texterea\u003e dùng để làm gì?",
+      "Text": "Thẻ <textarea rows= cols = ...></texterea> dùng để làm gì?",
       "Marks": 1,
       "AnswerId": 106754,
       "Answers": [
@@ -29016,7 +29030,7 @@
     },
     {
       "Id": 25803,
-      "Text": "Để chọn tất cả các phần tử \u003ca\u003e với giá trị thuộc tính bắt đầu bằng “# “, người ta sử dụng câu lênh nào sau đây?",
+      "Text": "Để chọn tất cả các phần tử <a> với giá trị thuộc tính bắt đầu bằng “# “, người ta sử dụng câu lênh nào sau đây?",
       "Marks": 1,
       "AnswerId": 106778,
       "Answers": [
@@ -29136,17 +29150,17 @@
     },
     {
       "Id": 25808,
-      "Text": "Cú pháp truy cập đến phần tử \u003ca\u003e có id là linkID?",
+      "Text": "Cú pháp truy cập đến phần tử <a> có id là linkID?",
       "Marks": 1,
       "AnswerId": 106801,
       "Answers": [
         {
           "Id": 106798,
-          "Text": "$(\u0027a#linkID\u0027)"
+          "Text": "$('a#linkID')"
         },
         {
           "Id": 106799,
-          "Text": "$(\u0027a?linkID\u0027)"
+          "Text": "$('a?linkID')"
         },
         {
           "Id": 106800,
@@ -29160,7 +29174,7 @@
     },
     {
       "Id": 25809,
-      "Text": "Để chọn tất cả các phần tử \u003ca\u003e với giá trị thuộc tính kết thúc bằng “# “, người ta sử dụng câu lênh nào sau đây?",
+      "Text": "Để chọn tất cả các phần tử <a> với giá trị thuộc tính kết thúc bằng “# “, người ta sử dụng câu lênh nào sau đây?",
       "Marks": 1,
       "AnswerId": 106803,
       "Answers": [
@@ -29304,13 +29318,13 @@
     },
     {
       "Id": 25815,
-      "Text": "Để cài đặt FireBase, ta đưa dòng code: \u003cscript src=\u0027https://cdn.firebase.com/v0/firebase.js\u0027\u003e\u003c/script\u003e vào phần nào?",
+      "Text": "Để cài đặt FireBase, ta đưa dòng code: <script src='https://cdn.firebase.com/v0/firebase.js'></script> vào phần nào?",
       "Marks": 1,
       "AnswerId": 106828,
       "Answers": [
         {
           "Id": 106826,
-          "Text": "\u0027footer"
+          "Text": "'footer"
         },
         {
           "Id": 106827,
@@ -29358,19 +29372,19 @@
       "Answers": [
         {
           "Id": 106834,
-          "Text": "myDataRef.write(\u0027dữ liệu\u0027);"
+          "Text": "myDataRef.write('dữ liệu');"
         },
         {
           "Id": 106835,
-          "Text": "myDataRef.writeln(\u0027dữ liệu\u0027);"
+          "Text": "myDataRef.writeln('dữ liệu');"
         },
         {
           "Id": 106836,
-          "Text": "myDataRef.set(\u0027dữ liệu\u0027);"
+          "Text": "myDataRef.set('dữ liệu');"
         },
         {
           "Id": 106837,
-          "Text": "myDataRef.get(\u0027dữ liệu\u0027);"
+          "Text": "myDataRef.get('dữ liệu');"
         }
       ]
     },
@@ -29466,7 +29480,7 @@
     },
     {
       "Id": 25662,
-      "Text": "Để viết chú thích trong các file css người sử dụng có thể sử dụng cách nào dưới đây: a. \u003c!-- chú thích--\u003e b. // chú thích c. -- chú thích d. /* chú thích */",
+      "Text": "Để viết chú thích trong các file css người sử dụng có thể sử dụng cách nào dưới đây: a. <!-- chú thích--> b. // chú thích c. -- chú thích d. /* chú thích */",
       "Marks": 1,
       "AnswerId": 106238,
       "Answers": [
@@ -29520,19 +29534,19 @@
       "Answers": [
         {
           "Id": 106244,
-          "Text": "\u003cdiv id=\"menu\"\u003e   \u003cul\u003e     \u003cli\u003e \u003ca href=\"#\"\u003eTrang chủ\u003c/a\u003e\u003c/li\u003e     \u003cli\u003e \u003ca href=\"#\"\u003eGiới thiệu\u003c/a\u003e\u003c/li\u003e   \u003cdiv\u003e \u003c/ul\u003e"
+          "Text": "<div id=\"menu\">   <ul>     <li> <a href=\"#\">Trang chủ</a></li>     <li> <a href=\"#\">Giới thiệu</a></li>   <div> </ul>"
         },
         {
           "Id": 106245,
-          "Text": "\u003cdiv id=\"menu\"\u003e   \u003cul\u003e     \u003cli\u003e \u003ca href=\"#\"\u003eTrang chủ\u003c/a\u003e\u003c/li\u003e     \u003cli\u003e \u003ca href=\"#\"\u003eGiới thiệu\u003c/a\u003e\u003c/ul\u003e   \u003c/li\u003e \u003c/div\u003e"
+          "Text": "<div id=\"menu\">   <ul>     <li> <a href=\"#\">Trang chủ</a></li>     <li> <a href=\"#\">Giới thiệu</a></ul>   </li> </div>"
         },
         {
           "Id": 106246,
-          "Text": "\u003cdiv id=\"menu\"\u003e   \u003cul\u003e     \u003cli\u003e \u003ca href=\"#\"\u003eTrang chủ\u003c/a\u003e\u003c/li\u003e     \u003cli\u003e \u003ca href=\"#\"\u003eGiới thiệu\u003c/a\u003e\u003c/li\u003e   \u003c/ul\u003e \u003c/div\u003e"
+          "Text": "<div id=\"menu\">   <ul>     <li> <a href=\"#\">Trang chủ</a></li>     <li> <a href=\"#\">Giới thiệu</a></li>   </ul> </div>"
         },
         {
           "Id": 106247,
-          "Text": "\u003cdiv id=\"menu\"\u003e   \u003cul\u003e     \u003cli\u003e \u003ca href=\"#\"\u003eTrang chủ\u003c/li\u003e\u003c/a\u003e     \u003cli\u003e \u003ca href=\"#\"\u003eGiới thiệu\u003c/a\u003e\u003c/li\u003e   \u003c/ul\u003e \u003c/div\u003e"
+          "Text": "<div id=\"menu\">   <ul>     <li> <a href=\"#\">Trang chủ</li></a>     <li> <a href=\"#\">Giới thiệu</a></li>   </ul> </div>"
         }
       ]
     },
@@ -29562,13 +29576,13 @@
     },
     {
       "Id": 25666,
-      "Text": "Ký tự \"\u0026lt;\" được sử dụng để làm gì trong XHTML?",
+      "Text": "Ký tự \"&lt;\" được sử dụng để làm gì trong XHTML?",
       "Marks": 1,
       "AnswerId": 106252,
       "Answers": [
         {
           "Id": 106252,
-          "Text": "Đại diện cho ký tự \u003c được hiển thị trên màn hình"
+          "Text": "Đại diện cho ký tự < được hiển thị trên màn hình"
         },
         {
           "Id": 106253,
@@ -29592,49 +29606,49 @@
       "Answers": [
         {
           "Id": 106256,
-          "Text": "menu Commands\u003eCheck Spelling"
+          "Text": "menu Commands>Check Spelling"
         },
         {
           "Id": 106257,
-          "Text": "menu Commands\u003eApply Source Formatting"
+          "Text": "menu Commands>Apply Source Formatting"
         },
         {
           "Id": 106258,
-          "Text": "menu View\u003eCode"
+          "Text": "menu View>Code"
         },
         {
           "Id": 106259,
-          "Text": "menu View\u003eDesign"
+          "Text": "menu View>Design"
         }
       ]
     },
     {
       "Id": 25668,
-      "Text": "Thẻ nào là thẻ cha của thẻ img trong đoạn mã sau? \u003cdiv id=\"header\"\u003e     \u003cdiv id=\"banner\"\u003e         \u003cimg src=\"Images/Banner.jpg\" /\u003e         \u003cp id=\"logo\"\u003eViệt Nam Xuất Khẩu\u003c/p\u003e     \u003c/div\u003e     \u003cdiv id=\"menu\"\u003e \u003c/div\u003e \u003c/div\u003e",
+      "Text": "Thẻ nào là thẻ cha của thẻ img trong đoạn mã sau? <div id=\"header\">     <div id=\"banner\">         <img src=\"Images/Banner.jpg\" />         <p id=\"logo\">Việt Nam Xuất Khẩu</p>     </div>     <div id=\"menu\"> </div> </div>",
       "Marks": 1,
       "AnswerId": 106263,
       "Answers": [
         {
           "Id": 106260,
-          "Text": "\u003cdiv id=\"header\"\u003e"
+          "Text": "<div id=\"header\">"
         },
         {
           "Id": 106261,
-          "Text": "\u003cdiv id=\"menu\"\u003e"
+          "Text": "<div id=\"menu\">"
         },
         {
           "Id": 106262,
-          "Text": "\u003cp id=\"logo\"\u003e"
+          "Text": "<p id=\"logo\">"
         },
         {
           "Id": 106263,
-          "Text": "\u003cdiv id=\"banner\"\u003e"
+          "Text": "<div id=\"banner\">"
         }
       ]
     },
     {
       "Id": 25669,
-      "Text": "Xác định luật css viết sai trong đoạn mã sau: \u003cdiv id=\"header\"\u003e     \u003cdiv id=\"banner\"\u003e         \u003cimg src=\"Images/Banner.jpg\" /\u003e         \u003cp id=\"logo\"\u003eViệt Nam Xuất Khẩu\u003c/p\u003e     \u003c/div\u003e     \u003cdiv id=\"menu\"\u003e \u003c/div\u003e \u003c/div\u003e",
+      "Text": "Xác định luật css viết sai trong đoạn mã sau: <div id=\"header\">     <div id=\"banner\">         <img src=\"Images/Banner.jpg\" />         <p id=\"logo\">Việt Nam Xuất Khẩu</p>     </div>     <div id=\"menu\"> </div> </div>",
       "Marks": 1,
       "AnswerId": 106265,
       "Answers": [
@@ -29658,7 +29672,7 @@
     },
     {
       "Id": 25670,
-      "Text": "Để mỗi khi click chuột vào ô textbox, màu nền ô đó chuyển sang màu đỏ thì lệnh CSS tác dụng lên thẻ \u003cinput type=\"text\" name=\"user\" /\u003e  được viết là:",
+      "Text": "Để mỗi khi click chuột vào ô textbox, màu nền ô đó chuyển sang màu đỏ thì lệnh CSS tác dụng lên thẻ <input type=\"text\" name=\"user\" />  được viết là:",
       "Marks": 1,
       "AnswerId": 106271,
       "Answers": [
@@ -29722,7 +29736,7 @@
     },
     {
       "Id": 25673,
-      "Text": "Với lệnh CSS: .title_top{color:red} #new_top {color:green} Áp dụng cho đoạn mã XHTML dưới đây, style sẽ hiển thị như thế nào? \u003cp class=\"title_top\" id=\"new_top\"\u003eTái đề xuất xây dựng đường sắt cao tốc Bắc - Nam\u003c/p\u003e",
+      "Text": "Với lệnh CSS: .title_top{color:red} #new_top {color:green} Áp dụng cho đoạn mã XHTML dưới đây, style sẽ hiển thị như thế nào? <p class=\"title_top\" id=\"new_top\">Tái đề xuất xây dựng đường sắt cao tốc Bắc - Nam</p>",
       "Marks": 1,
       "AnswerId": 106279,
       "Answers": [
@@ -29794,7 +29808,7 @@
     },
     {
       "Id": 25676,
-      "Text": "Với lệnh CSS là .title em:last-child {color:red}áp dụng cho đoạn mã XHTML dưới đây, style sẽ hiển thị như thế nào? \u003cp class=\"title\"\u003e\u003cem\u003eCông nghệ\u003c/em\u003e giúp \u003cem\u003enhìn xuyên qua\u003c/em\u003e những \u003cem\u003exe \u003c/em\u003eđi trước\u003c/p\u003e",
+      "Text": "Với lệnh CSS là .title em:last-child {color:red}áp dụng cho đoạn mã XHTML dưới đây, style sẽ hiển thị như thế nào? <p class=\"title\"><em>Công nghệ</em> giúp <em>nhìn xuyên qua</em> những <em>xe </em>đi trước</p>",
       "Marks": 1,
       "AnswerId": 106293,
       "Answers": [
@@ -29834,7 +29848,7 @@
     },
     {
       "Id": 25678,
-      "Text": "Với lệnh CSS là p span{color:blue;}áp dụng cho đoạn mã XHTML dưới đây, style sẽ hiển thị: \u003cdiv class=\"new\"\u003e      \u003cp class=\"title\"\u003eHàng trăm người chặn \u003cspan\u003e quốc lộ 1A\u003c/span\u003e\u003c/p\u003e      \u003cp class=\"content\"\u003eThấy \u003cspan\u003etàu quốc tế \u003c/span\u003e đến, doanh nghiệp lạ",
+      "Text": "Với lệnh CSS là p span{color:blue;}áp dụng cho đoạn mã XHTML dưới đây, style sẽ hiển thị: <div class=\"new\">      <p class=\"title\">Hàng trăm người chặn <span> quốc lộ 1A</span></p>      <p class=\"content\">Thấy <span>tàu quốc tế </span> đến, doanh nghiệp lạ",
       "Marks": 1,
       "AnswerId": 106298,
       "Answers": [
@@ -29864,15 +29878,15 @@
       "Answers": [
         {
           "Id": 106300,
-          "Text": "\u003cstyle type=\"text/javascript\"\u003e\u003c/style\u003e"
+          "Text": "<style type=\"text/javascript\"></style>"
         },
         {
           "Id": 106301,
-          "Text": "\u003clink href=\"#\" rel=\"stylesheet\" type=\"text/css\" /\u003e"
+          "Text": "<link href=\"#\" rel=\"stylesheet\" type=\"text/css\" />"
         },
         {
           "Id": 106302,
-          "Text": "\u003cstyle  type=\"text/css\"\u003e \u003c/style\u003e"
+          "Text": "<style  type=\"text/css\"> </style>"
         },
         {
           "Id": 106303,
@@ -29906,7 +29920,7 @@
     },
     {
       "Id": 25681,
-      "Text": "Để đoạn văn bản trong thẻ p thụt vào đầu dòng 0.8em và độ cao của dòng là 21px thì lệnh CSS nào được áp dụng cho đoạn mã XHTML sau: \u003cp class=\"NoiDung\"\u003eNeymar làm lu mờ Gareth Bale trong trận đấu ở La Liga hôm 26/10 là một nội dung trong phần biếm họa bóng",
+      "Text": "Để đoạn văn bản trong thẻ p thụt vào đầu dòng 0.8em và độ cao của dòng là 21px thì lệnh CSS nào được áp dụng cho đoạn mã XHTML sau: <p class=\"NoiDung\">Neymar làm lu mờ Gareth Bale trong trận đấu ở La Liga hôm 26/10 là một nội dung trong phần biếm họa bóng",
       "Marks": 1,
       "AnswerId": 106310,
       "Answers": [
@@ -29930,7 +29944,7 @@
     },
     {
       "Id": 25682,
-      "Text": "Muốn nội dung thẻ div trong đoạn mã XHTML dưới đây có khoảng cách giữa các từ giãn cách nhau 0.2em, dùng lệnh CSS nào? \u003cdiv class=\"cate\"\u003e Thể thao trong nước\u003c/div\u003e",
+      "Text": "Muốn nội dung thẻ div trong đoạn mã XHTML dưới đây có khoảng cách giữa các từ giãn cách nhau 0.2em, dùng lệnh CSS nào? <div class=\"cate\"> Thể thao trong nước</div>",
       "Marks": 1,
       "AnswerId": 106315,
       "Answers": [
@@ -29978,7 +29992,7 @@
     },
     {
       "Id": 25684,
-      "Text": "Để khi di chuột qua link có màu xanh lá cây và có gạch chân thì lệnh CSS nào được áp dụng cho đoạn mã XHTML sau: \u003cp class=\"news\"\u003e\u003ca href=\"#\"\u003eGareth Bale đánh giày cho Neymar ở El Clasico\u003c/a\u003e\u003c/p\u003e",
+      "Text": "Để khi di chuột qua link có màu xanh lá cây và có gạch chân thì lệnh CSS nào được áp dụng cho đoạn mã XHTML sau: <p class=\"news\"><a href=\"#\">Gareth Bale đánh giày cho Neymar ở El Clasico</a></p>",
       "Marks": 1,
       "AnswerId": 106320,
       "Answers": [
@@ -30026,7 +30040,7 @@
     },
     {
       "Id": 25686,
-      "Text": "Muốn loại bỏ gạch chân cho văn bản trong đoạn mã XHTML dưới đây, lệnh CSS nào đúng? \u003cdiv class=\"cate\"\u003e\u003ca href=\"#\"\u003e Thể thao trong nước\u003c/a\u003e\u003c/div\u003e",
+      "Text": "Muốn loại bỏ gạch chân cho văn bản trong đoạn mã XHTML dưới đây, lệnh CSS nào đúng? <div class=\"cate\"><a href=\"#\"> Thể thao trong nước</a></div>",
       "Marks": 1,
       "AnswerId": 106330,
       "Answers": [
@@ -30194,7 +30208,7 @@
     },
     {
       "Id": 25693,
-      "Text": "Lệnh CSS nào đúng khi sử dụng thuộc tính position cho mã XHTML dưới đây sẽ không di chuyển khi trang được cuộn? \u003cp class=\"title\"\u003eTin Xã Hội \u003c/p\u003e",
+      "Text": "Lệnh CSS nào đúng khi sử dụng thuộc tính position cho mã XHTML dưới đây sẽ không di chuyển khi trang được cuộn? <p class=\"title\">Tin Xã Hội </p>",
       "Marks": 1,
       "AnswerId": 106356,
       "Answers": [
@@ -30282,7 +30296,7 @@
     },
     {
       "Id": 25697,
-      "Text": "Với lệnh CSS: #box {width:200px; height:100px; background-color:#09F} .Tin{width:100px; height:100px; background-color:#930;} Áp dụng cho đoạn mã XHTML dưới đây: \u003cdiv id=\"box\"\u003e     \u003cp class=\"Tin\"\u003eGareth Bale đánh giày cho Neymar ở El Clasico\u003c/p\u003e \u003c/div\u003e Th",
+      "Text": "Với lệnh CSS: #box {width:200px; height:100px; background-color:#09F} .Tin{width:100px; height:100px; background-color:#930;} Áp dụng cho đoạn mã XHTML dưới đây: <div id=\"box\">     <p class=\"Tin\">Gareth Bale đánh giày cho Neymar ở El Clasico</p> </div> Th",
       "Marks": 1,
       "AnswerId": 106372,
       "Answers": [
@@ -30532,7 +30546,7 @@
         },
         {
           "Id": 106411,
-          "Text": "Với lệnh CSS: #content{width:600px; height:200px; background-color:#990} #left{width:200px; height:200px; background-color:#930; margin:10px;float:left} Áp dụng cho đoạn mã XHTML dưới đây: \u003cdiv id=\"content\"\u003e      \u003cdiv id=\"left\"\u003e\u003c/div\u003e      \u003cdiv id=\"right\""
+          "Text": "Với lệnh CSS: #content{width:600px; height:200px; background-color:#990} #left{width:200px; height:200px; background-color:#930; margin:10px;float:left} Áp dụng cho đoạn mã XHTML dưới đây: <div id=\"content\">      <div id=\"left\"></div>      <div id=\"right\""
         },
         {
           "Id": 106412,
@@ -30618,25 +30632,25 @@
     },
     {
       "Id": 25711,
-      "Text": "Trong table, thành phần \u003ctd\u003e nằm trong thành phần nào sau đây?",
+      "Text": "Trong table, thành phần <td> nằm trong thành phần nào sau đây?",
       "Marks": 1,
       "AnswerId": 106426,
       "Answers": [
         {
           "Id": 106426,
-          "Text": "\u003ctr\u003e"
+          "Text": "<tr>"
         },
         {
           "Id": 106427,
-          "Text": "\u003clabel\u003e"
+          "Text": "<label>"
         },
         {
           "Id": 106428,
-          "Text": "\u003cdt\u003e"
+          "Text": "<dt>"
         },
         {
           "Id": 106429,
-          "Text": "\u003cshow\u003e"
+          "Text": "<show>"
         }
       ]
     },
@@ -30810,7 +30824,7 @@
     },
     {
       "Id": 25720,
-      "Text": "Với đoạn mã XHTML: \u003cul\u003e     \u003cli\u003e Danh sách 1 \u003c/li\u003e     \u003cli\u003e Danh sách 2 \u003c/li\u003e     \u003cli\u003e Danh sách 3 \u003c/li\u003e \u003c/ul\u003e Để tạo đường kẻ dưới nét đứt 1px màu đỏ cho mỗi dòng của danh sách người dùng sử dụng lệnh nào?",
+      "Text": "Với đoạn mã XHTML: <ul>     <li> Danh sách 1 </li>     <li> Danh sách 2 </li>     <li> Danh sách 3 </li> </ul> Để tạo đường kẻ dưới nét đứt 1px màu đỏ cho mỗi dòng của danh sách người dùng sử dụng lệnh nào?",
       "Marks": 1,
       "AnswerId": 106458,
       "Answers": [
@@ -30834,7 +30848,7 @@
     },
     {
       "Id": 25721,
-      "Text": "Với đoạn mã XHTML: \u003cul\u003e     \u003cli\u003e Danh sách 1 \u003c/li\u003e     \u003cli\u003e Danh sách 2 \u003c/li\u003e     \u003cli\u003e Danh sách 3 \u003c/li\u003e \u003c/ul\u003e Để xóa bỏ dấu tròn bullet của danh sách người dùng sử dụng lệnh nào?",
+      "Text": "Với đoạn mã XHTML: <ul>     <li> Danh sách 1 </li>     <li> Danh sách 2 </li>     <li> Danh sách 3 </li> </ul> Để xóa bỏ dấu tròn bullet của danh sách người dùng sử dụng lệnh nào?",
       "Marks": 1,
       "AnswerId": 106463,
       "Answers": [
@@ -30874,7 +30888,7 @@
     },
     {
       "Id": 25723,
-      "Text": "Muốn khi click chuột để nhập liệu vào textbox, màu nền textbox chuyển sang màu xanh thì khai báo CSS như thế nào? \u003cinput class=\"NhapLieu\" type=\"text\" name=\"DiaChi\"  /\u003e",
+      "Text": "Muốn khi click chuột để nhập liệu vào textbox, màu nền textbox chuyển sang màu xanh thì khai báo CSS như thế nào? <input class=\"NhapLieu\" type=\"text\" name=\"DiaChi\"  />",
       "Marks": 1,
       "AnswerId": 106468,
       "Answers": [
@@ -30898,7 +30912,7 @@
     },
     {
       "Id": 25724,
-      "Text": "Với đoạn mã XHTML: \u003cdiv id=\"menu\"\u003e     \u003cul\u003e         \u003cli\u003e\u003ca href=\"#\"\u003e Trang chủ\u003c/a\u003e\u003c/li\u003e         \u003cli\u003e\u003ca href=\"#\"\u003e Sản phẩm\u003c/a\u003e\u003c/li\u003e         \u003cli\u003e\u003ca href=\"#\"\u003e Liên hệ\u003c/a\u003e\u003c/li\u003e     \u003c/ul\u003e \u003c/div\u003e và lệnh CSS: #menu ul li{float:left;padding:0 20px;} Muốn mỗi thà",
+      "Text": "Với đoạn mã XHTML: <div id=\"menu\">     <ul>         <li><a href=\"#\"> Trang chủ</a></li>         <li><a href=\"#\"> Sản phẩm</a></li>         <li><a href=\"#\"> Liên hệ</a></li>     </ul> </div> và lệnh CSS: #menu ul li{float:left;padding:0 20px;} Muốn mỗi thà",
       "Marks": 1,
       "AnswerId": 106472,
       "Answers": [
@@ -31000,19 +31014,19 @@
       "Answers": [
         {
           "Id": 106486,
-          "Text": "\u003cinput type=\"textarea\" name=\"user\" /\u003e"
+          "Text": "<input type=\"textarea\" name=\"user\" />"
         },
         {
           "Id": 106487,
-          "Text": "\u003cinput type=\"textfield\" name=\"user\" /\u003e"
+          "Text": "<input type=\"textfield\" name=\"user\" />"
         },
         {
           "Id": 106488,
-          "Text": "\u003cinput type=\"text\" name=\"user\" /\u003e"
+          "Text": "<input type=\"text\" name=\"user\" />"
         },
         {
           "Id": 106489,
-          "Text": "\u003cinput type=\"textbox\" name=\"user\" /\u003e"
+          "Text": "<input type=\"textbox\" name=\"user\" />"
         }
       ]
     },
@@ -31042,7 +31056,7 @@
     },
     {
       "Id": 25730,
-      "Text": "Giả sử có mã XHTML:  \u003cinput class=\"NhapLieu\" type=\"text\" name=\"User\"   /\u003e Muốn để ô textbox có dòng chữ \"Điền tên đăng nhập\" mặc định, khi click chuột vào dòng chữ biến mất thì người dùng thêm thuộc tính nào vào thẻ input?",
+      "Text": "Giả sử có mã XHTML:  <input class=\"NhapLieu\" type=\"text\" name=\"User\"   /> Muốn để ô textbox có dòng chữ \"Điền tên đăng nhập\" mặc định, khi click chuột vào dòng chữ biến mất thì người dùng thêm thuộc tính nào vào thẻ input?",
       "Marks": 1,
       "AnswerId": 106495,
       "Answers": [
@@ -31160,19 +31174,19 @@
       "Answers": [
         {
           "Id": 106512,
-          "Text": "\u003cinput name=\"image\" type=\"submit\" /\u003e"
+          "Text": "<input name=\"image\" type=\"submit\" />"
         },
         {
           "Id": 106513,
-          "Text": "\u003cinput name=\"image\" type=\"button\" /\u003e"
+          "Text": "<input name=\"image\" type=\"button\" />"
         },
         {
           "Id": 106514,
-          "Text": "\u003cinput type=\"image\" src=\"url\" /\u003e"
+          "Text": "<input type=\"image\" src=\"url\" />"
         },
         {
           "Id": 106515,
-          "Text": "\u003cinput name=\"image\" type=\"file\" /\u003e"
+          "Text": "<input name=\"image\" type=\"file\" />"
         }
       ]
     },
@@ -32836,7 +32850,7 @@
     },
     {
       "Id": 25415,
-      "Text": "Cho đoạn lệnh sau:Ext.application({ name:\"fpoly\", launch:function(){ Ext.create(\u0027Ext.Panel\u0027,{ fullscreen:true, html:\u0027hello fpoly\u0027, }) }})Hãy cho biết hàm create dùng để làm gì?",
+      "Text": "Cho đoạn lệnh sau:Ext.application({ name:\"fpoly\", launch:function(){ Ext.create('Ext.Panel',{ fullscreen:true, html:'hello fpoly', }) }})Hãy cho biết hàm create dùng để làm gì?",
       "Marks": 1,
       "AnswerId": 105280,
       "Answers": [
@@ -34098,19 +34112,19 @@
       "Answers": [
         {
           "Id": 103036,
-          "Text": "Tools \u003e Toolbox"
+          "Text": "Tools > Toolbox"
         },
         {
           "Id": 103037,
-          "Text": "Build \u003e Toolbox"
+          "Text": "Build > Toolbox"
         },
         {
           "Id": 103038,
-          "Text": "Project \u003e Toolbox"
+          "Text": "Project > Toolbox"
         },
         {
           "Id": 103039,
-          "Text": "View \u003e Toolbox"
+          "Text": "View > Toolbox"
         }
       ]
     },
@@ -34620,7 +34634,7 @@
     },
     {
       "Id": 24860,
-      "Text": "Sau khi thực hiện xong lệnh, kết quả biến a bằng bao nhiêu? Dim a As Integer = 50 If a \u003e 100 Then a += 10 Else a -= 10 End If",
+      "Text": "Sau khi thực hiện xong lệnh, kết quả biến a bằng bao nhiêu? Dim a As Integer = 50 If a > 100 Then a += 10 Else a -= 10 End If",
       "Marks": 1,
       "AnswerId": 103125,
       "Answers": [
@@ -34678,11 +34692,11 @@
         },
         {
           "Id": 103133,
-          "Text": "\u003e\u003c"
+          "Text": "><"
         },
         {
           "Id": 103134,
-          "Text": "\u003c\u003e"
+          "Text": "<>"
         },
         {
           "Id": 103135,
@@ -34716,7 +34730,7 @@
     },
     {
       "Id": 24864,
-      "Text": "Kết quả biến a bằng bao nhiêu sau khi thực hiện đoạn mã sau: Dim a As Integer = 50 If a \u003e 100 Then a += 10 End If",
+      "Text": "Kết quả biến a bằng bao nhiêu sau khi thực hiện đoạn mã sau: Dim a As Integer = 50 If a > 100 Then a += 10 End If",
       "Marks": 1,
       "AnswerId": 103142,
       "Answers": [
@@ -34788,7 +34802,7 @@
     },
     {
       "Id": 24867,
-      "Text": "Hãy cho biết kết quả hiển thị khi thực hiện đoạn mã sau: txtDiem.Text = \"0a60\"Select Case Val(txtDiem.Text)          Case 0             lblKetQua.Text = \"Điểm liệt!\"          Case Is \u003e= 50             lblKetQua.Text = \"Qua môn!\"          Case Else        ",
+      "Text": "Hãy cho biết kết quả hiển thị khi thực hiện đoạn mã sau: txtDiem.Text = \"0a60\"Select Case Val(txtDiem.Text)          Case 0             lblKetQua.Text = \"Điểm liệt!\"          Case Is >= 50             lblKetQua.Text = \"Qua môn!\"          Case Else        ",
       "Marks": 1,
       "AnswerId": 103155,
       "Answers": [
@@ -34914,7 +34928,7 @@
       "Answers": [
         {
           "Id": 103172,
-          "Text": "\u003e="
+          "Text": ">="
         },
         {
           "Id": 103173,
@@ -34926,7 +34940,7 @@
         },
         {
           "Id": 103175,
-          "Text": "\u003c="
+          "Text": "<="
         }
       ]
     },
@@ -35004,7 +35018,7 @@
     },
     {
       "Id": 24876,
-      "Text": "Giá trị của biến number sau khi thực hiện xong vòng lặp là bao nhiêu? Dim number As Integer = 2 Do While number \u003c 4   number *= 2 Loop",
+      "Text": "Giá trị của biến number sau khi thực hiện xong vòng lặp là bao nhiêu? Dim number As Integer = 2 Do While number < 4   number *= 2 Loop",
       "Marks": 1,
       "AnswerId": 103188,
       "Answers": [
@@ -35028,7 +35042,7 @@
     },
     {
       "Id": 24877,
-      "Text": "Lệnh For... Next cho phép khai báo biến đếm For i As Integer = 0 To 10. Còn lệnh Do While... có cho phép khai báo Do While i as Integer\u003c10 không?",
+      "Text": "Lệnh For... Next cho phép khai báo biến đếm For i As Integer = 0 To 10. Còn lệnh Do While... có cho phép khai báo Do While i as Integer<10 không?",
       "Marks": 1,
       "AnswerId": 103193,
       "Answers": [
@@ -35044,7 +35058,7 @@
     },
     {
       "Id": 24878,
-      "Text": "Giá trị của biến number sau khi thực hiện xong vòng lặp là bao nhiêu? Dim number As Integer = 2 Dim i As Integer = 0 Do   number += 4 Loop Until i \u003e 2",
+      "Text": "Giá trị của biến number sau khi thực hiện xong vòng lặp là bao nhiêu? Dim number As Integer = 2 Dim i As Integer = 0 Do   number += 4 Loop Until i > 2",
       "Marks": 1,
       "AnswerId": 103196,
       "Answers": [
@@ -35092,7 +35106,7 @@
     },
     {
       "Id": 24880,
-      "Text": "Giá trị của biến number sau khi thực hiện xong vòng lặp là bao nhiêu? Dim number As Integer = 2 Do While number \u003c 4   number *= 2 Loop",
+      "Text": "Giá trị của biến number sau khi thực hiện xong vòng lặp là bao nhiêu? Dim number As Integer = 2 Do While number < 4   number *= 2 Loop",
       "Marks": 1,
       "AnswerId": 103204,
       "Answers": [
@@ -35140,7 +35154,7 @@
     },
     {
       "Id": 24882,
-      "Text": "Giá trị của biến number sau khi thực hiện xong vòng lặp là bao nhiêu? Dim number As Integer = 2 Dim i As Integer = 0 Do    number += 4 Loop While i \u003e 2",
+      "Text": "Giá trị của biến number sau khi thực hiện xong vòng lặp là bao nhiêu? Dim number As Integer = 2 Dim i As Integer = 0 Do    number += 4 Loop While i > 2",
       "Marks": 1,
       "AnswerId": 103210,
       "Answers": [
@@ -36648,7 +36662,7 @@
       "Answers": [
         {
           "Id": 102647,
-          "Text": "http://www.mybookstore.com/showgood.php?category=31\u0026good=142"
+          "Text": "http://www.mybookstore.com/showgood.php?category=31&good=142"
         },
         {
           "Id": 102648,
@@ -36660,7 +36674,7 @@
         },
         {
           "Id": 102650,
-          "Text": "http://www.mybookstore.com/fpt\u0026good=angels-and-demons"
+          "Text": "http://www.mybookstore.com/fpt&good=angels-and-demons"
         }
       ]
     },
@@ -37472,7 +37486,7 @@
         },
         {
           "Id": 102785,
-          "Text": "\u003c7$"
+          "Text": "<7$"
         },
         {
           "Id": 102786,
@@ -37536,19 +37550,19 @@
       "Answers": [
         {
           "Id": 102795,
-          "Text": "\u003c 300"
+          "Text": "< 300"
         },
         {
           "Id": 102796,
-          "Text": "\u003c 500"
+          "Text": "< 500"
         },
         {
           "Id": 102797,
-          "Text": "\u003c 200"
+          "Text": "< 200"
         },
         {
           "Id": 102798,
-          "Text": "\u003c 400"
+          "Text": "< 400"
         }
       ]
     },

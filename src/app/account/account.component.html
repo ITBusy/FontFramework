@@ -1,16 +1,16 @@
-<div class="Login__container">
+<div class="Login__container" #Login_container>
     <div class="Login__forms-container">
         <div class="Login__signin-signup">
-            <form action="" class="Login__sign-in--form">
+            <form action="" class="Login__sign-in--form" [formGroup]="LoginForm" (ngSubmit)="onLogin()">
                 <h2 class="Login__title">Đăng Nhập</h2>
                 <div class="Login__input-field">
                     <i class="fas fa-user"></i>
-                    <input type="text" placeholder="Tài Khoản">
+                    <input type="text" placeholder="Tài Khoản" name="username" formControlName="username">
                 </div>
                 <div class="Login__input-field">
                     <i class="fas fa-lock"></i>
                     <input type="password" class="show-pass login" name="password" autocomplete="on"
-                        placeholder="Mật Khẩu">
+                        placeholder="Mật Khẩu" formControlName="password">
                     <span class="show-btn show-l"><i style="cursor:pointer" class="fas fa-eye"></i></span>
                 </div>
                 <button type="submit" class="btn Login__btn-solid">Đăng Nhập</button>
@@ -32,26 +32,38 @@
             </form>
 
             <!-- Registration -->
-            <form action="" class="Login__sign-up--form">
+            <form [formGroup]="valiForm" class="Login__sign-up--form" (ngSubmit)="onSignUp()">
                 <h2 class="Login__title">Đăng Ký</h2>
                 <div class="Login__input-field">
                     <i class="fas fa-user"></i>
-                    <input type="text" placeholder="Tài Khoản">
+                    <input type="text" placeholder="Tài Khoản" name="userName" formControlName="userName">
                 </div>
+                <span *ngIf="valid('userName').invalid && valid('userName').touched"
+                    class="form__message">{{getMessageUsername()}}</span>
+
                 <div class="Login__input-field">
                     <i class="fas fa-envelope"></i>
-                    <input type="email" placeholder="Email">
+                    <input type="email" placeholder="Email" name="email" formControlName="email">
                 </div>
+                <span *ngIf="valid('email').invalid && valid('email').touched"
+                    class="form__message">{{getMessageEmail()}}</span>
+
                 <div class="Login__input-field">
                     <i class="fas fa-user-graduate"></i>
-                    <input type="text" placeholder="Họ Tên">
+                    <input type="text" placeholder="Họ Tên" name="fullname" formControlName="fullname">
                 </div>
+                <span *ngIf="valid('fullname').invalid && valid('fullname').touched"
+                    class="form__message">{{getMessageFullName()}}</span>
+
                 <div class="Login__input-field">
                     <i class="fas fa-lock"></i>
                     <input type="password" class="show-pass signup" name="password" autocomplete="on"
-                        placeholder="Mật Khẩu">
+                        placeholder="Mật Khẩu" formControlName="password">
                     <span class="show-btn show-s"><i class="fas fa-eye"></i></span>
                 </div>
+                <span *ngIf="valid('password').invalid && valid('password').touched"
+                    class="form__message">{{getMessagePassword()}}</span>
+
                 <button type="submit" class="btn Login__btn-solid">Đăng Ký</button>
                 <p class="Login__social-text">Hoặc Đăng nhập bằng tài khoản</p>
                 <div class="Login__social-media">
@@ -78,7 +90,7 @@
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt vero labore totam, nisi neque
                     assumenda, aliquam ipsam, quaerat dicta voluptatibus nihil nesciunt repudiandae. Incidunt harum
                     reprehenderit perspiciatis ratione placeat quos.</p>
-                <button class="btn transparent" id="sign-up-btn">Đăng Ký</button>
+                <button class="btn transparent" id="sign-up-btn" #SignUp>Đăng Ký</button>
             </div>
             <img src="../../assets/image/Signup.svg" alt="" class="image">
         </div>
@@ -89,7 +101,7 @@
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt vero labore totam, nisi neque
                     assumenda, aliquam ipsam, quaerat dicta voluptatibus nihil nesciunt repudiandae. Incidunt harum
                     reprehenderit perspiciatis ratione placeat quos.</p>
-                <button class="btn transparent" id="sign-in-btn">Đăng Nhập</button>
+                <button class="btn transparent" id="sign-in-btn" #SignIn>Đăng Nhập</button>
             </div>
             <img src="../../assets/image/Login.svg" alt="" class="image">
         </div>

@@ -2,7 +2,8 @@ import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
 import { QuizInterface } from '../interface/quiz.interface';
 import { SubjectInterface } from '../interface/subject.interface';
-import { Service } from '../service/service.service';
+import { AuthService } from '../service/auth/auth.service';
+import { Service } from '../service/user/service.service';
 
 @Component({
   selector: 'app-home',
@@ -13,7 +14,8 @@ export class HomeComponent implements OnInit {
   constructor(
     private ele: ElementRef,
     private service: Service,
-    private router : Router
+    private router: Router,
+    private authService: AuthService
   ) { }
 
   ngOnInit(): void {
@@ -57,20 +59,20 @@ export class HomeComponent implements OnInit {
       });
   }
 
-  clickQuit(event: any){
+  clickQuit(event: any) {
     this.info_box.nativeElement.classList.remove("activeInfo");//hide info box
     this.modal.nativeElement.style.display = "none";
   }
 
-  continueBtn(event: any){
+  continueBtn(event: any) {
     this.info_box.nativeElement.classList.remove("activeInfo"); //hide info box
-      this.quiz_box.nativeElement.classList.add("activeQuiz"); //show quiz box
-      this.subject_title.nativeElement.innerText = this.subjectName;
-      this.startTimer(30); //calling startTimer function
-      this.startTimerLine(0); //calling startTimerLine function
+    this.quiz_box.nativeElement.classList.add("activeQuiz"); //show quiz box
+    this.subject_title.nativeElement.innerText = this.subjectName;
+    this.startTimer(30); //calling startTimer function
+    this.startTimerLine(0); //calling startTimerLine function
   }
 
-  listSubject(event: any){
+  listSubject(event: any) {
     const ite = this.ele.nativeElement.querySelectorAll('.list_group_item');
     // const modal = this.ele.nativeElement.querySelector('.modal-quiz');
     // const info_box = this.ele.nativeElement.querySelector(".info_box");
@@ -84,7 +86,7 @@ export class HomeComponent implements OnInit {
     this.info_box.nativeElement.classList.add("activeInfo");
     this.subb = event.target.getAttribute('sub');
     this.getQuiz();
-    this.subjectName = event.target.innerHTML; 
+    this.subjectName = event.target.innerHTML;
   }
   getSubject() {
     const ul = this.ele.nativeElement.querySelector('ul.list-group');
@@ -212,11 +214,15 @@ export class HomeComponent implements OnInit {
     return Math.floor(Math.random() * this.quizInterface.length);
   }
 
-  getPage(page: number){
+  getPage(page: number) {
     this.router.navigate(['home', page]);
   }
-  onClickPage(event: any){
+  onClickPage(event: any) {
     this.Page = event;
     this.getPage(event);
+  }
+
+  LogOut() {
+    this.authService.logout();
   }
 }
