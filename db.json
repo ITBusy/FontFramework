@@ -43,6 +43,28 @@
       "schoolfee": "",
       "mark": "",
       "id": 4
+    },
+    {
+      "username": "Hung123",
+      "password": "Admin123456",
+      "fullname": "HR Restaurant",
+      "email": "hoanghonvanoinhoem@gmail.com",
+      "birthday": "",
+      "gender": "",
+      "schoolfee": "",
+      "mark": "",
+      "id": 5
+    },
+    {
+      "username": "adcde",
+      "password": "Admin123",
+      "fullname": "HR Restaurant",
+      "email": "hoanghonvanoinhoem@gmail.com",
+      "birthday": "",
+      "gender": "",
+      "schoolfee": "",
+      "mark": "",
+      "id": 6
     }
   ],
   "ADAV": [

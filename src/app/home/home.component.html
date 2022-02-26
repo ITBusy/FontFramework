@@ -1,183 +1,181 @@
 <div class="bootstrap-wrapper">
-    <header class="row">
-        <img style="height: 5%;" src="../../assets/image/banner.png" alt="" class="pull-right">
-    </header>
-    <div style="margin-top: -1.4rem;" class="row">
-        <div class="m-4">
-            <nav style="margin-right: 2rem; margin-left: -1rem;" class="navbar navbar-dark bg-primary navbar-expand-lg">
-                <div class="container-fluid">
-                    <a href="#" class="navbar-brand">FPT Polytechnic</a>
-                    <button type="button" class="navbar-toggler" data-bs-toggle="collapse"
-                        data-bs-target="#navbarCollapse">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="collapse navbar-collapse" id="navbarCollapse">
-                        <div class="navbar-nav">
-                            <a href="#" class="nav-item nav-link active">Giới Thiệu</a>
-                            <a href="#" class="nav-item nav-link">Liên Hệ</a>
-                            <a href="#" class="nav-item nav-link" tabindex="-1">Góp Ý</a>
-                            <a href="#" class="nav-item nav-link" tabindex="-1">Hỏi Đáp</a>
-                        </div>
-                        <div class="navbar-nav ms-auto">
-                            <div class="nav-item dropdown">
-                                <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Tài Khoản</a>
-                                <div class="dropdown-menu">
-                                    <a class="dropdown-item space__line" href="#">Quên Mật Khẩu</a>
-
-                                    <a class="dropdown-item" href="#">Đăng Xuất</a>
-                                    <a class="dropdown-item" href="#">Đổi Mật Khẩu</a>
-                                    <a class="dropdown-item" href="#">Cập Nhật Tài Khoản</a>
-                                    <a class="dropdown-item" href="#" (click) = "LogOut()">Đăng Xuất</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </nav>
-        </div>
-    </div>
-    <div class="container">
-        <div class="row">
-            <!-- list product -->
-            <article class="col-sm-12 col-lg-12 col-xl-8">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-6 col-xs-12 col-lg-4 col-sm-6"
-                            *ngFor="let item of subjectInterface | paginate: { itemsPerPage: 3, currentPage: Page }">
-                            <a [attr.sub]="[item.Id]" class="product__link" (click) = "getQuizByProduct($event)">
-                                <div class="container__product">
-                                    <img src="../../assets/image/logos/{{item.Logo}}" alt="" class="product__img">
-                                    <span class="product__price">{{item.Name}}</span>
-                                </div>
-                            </a>
-                        </div>
-
-                    </div>
-                </div>
-            </article>
-
-            <!-- menu right -->
-            <aside class="col-md-12 col-sm-12 col-lg-12 col-xl-4">
-                <div class="card">
-                    <div class="card-body">
-                        <ul class="list-group" #list_group>
-                            <li class="list-group-item disabled">
-                                <i class="fas fa-list"></i>
-                                Danh Sách Môn Học
-                            </li>
-                            <li *ngFor="let list of subjectInterface" (click)="listSubject($event)" 
-                                class="list-group-item" [attr.sub]="[list.Id]">{{list.Name}}</li>
-                        </ul>
-                    </div>
-                </div>
-            </aside>
-        </div>
-    </div>
-    <pagination-controls (pageChange)="onClickPage($event)"></pagination-controls>
-    <span class="page__current"></span>
-    <!-- footer -->
-    <footer class="w-100 py-4 flex-shrink-0">
-        <div class="container py-4">
-            <div class="row gy-4 gx-5">
-                <div class="col-lg-4 col-md-6">
-                    <h5 class="h1 text-white">FB.</h5>
-                    <p class="small text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-                        eiusmod tempor incididunt.</p>
-                    <p class="small text-muted mb-0">&copy; Copyrights. All rights reserved. <a class="text-primary"
-                            href="#">Bootstrapious.com</a></p>
-                </div>
-                <div class="col-lg-2 col-md-6">
-                    <h5 class="text-white mb-3">Quick links</h5>
-                    <ul class="list-unstyled text-muted">
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">About</a></li>
-                        <li><a href="#">Get started</a></li>
-                        <li><a href="#">FAQ</a></li>
-                    </ul>
-                </div>
-                <div class="col-lg-2 col-md-6">
-                    <h5 class="text-white mb-3">Quick links</h5>
-                    <ul class="list-unstyled text-muted">
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">About</a></li>
-                        <li><a href="#">Get started</a></li>
-                        <li><a href="#">FAQ</a></li>
-                    </ul>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <h5 class="text-white mb-3">Newsletter</h5>
-                    <p class="small text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-                        eiusmod tempor incididunt.</p>
-                </div>
+  <header class="row">
+    <img style="height: 5%;" src="../../assets/image/banner.png" alt="" class="pull-right">
+  </header>
+  <div style="margin-top: -1.4rem;" class="row">
+    <div class="m-4">
+      <nav style="margin-right: 2rem; margin-left: -1rem;" class="navbar navbar-dark bg-primary navbar-expand-lg">
+        <div class="container-fluid">
+          <a href="#" class="navbar-brand">FPT Polytechnic</a>
+          <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav">
+              <a href="#" class="nav-item nav-link active">Giới Thiệu</a>
+              <a href="#" class="nav-item nav-link">Liên Hệ</a>
+              <a href="#" class="nav-item nav-link" tabindex="-1">Góp Ý</a>
+              <a href="#" class="nav-item nav-link" tabindex="-1">Hỏi Đáp</a>
             </div>
+            <div class="navbar-nav ms-auto">
+              <div class="nav-item dropdown">
+                <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Tài Khoản</a>
+                <div class="dropdown-menu">
+                  <a class="dropdown-item space__line" href="#">Quên Mật Khẩu</a>
+                  <a class="dropdown-item" href="#">Đổi Mật Khẩu</a>
+                  <a class="dropdown-item" href="#">Cập Nhật Tài Khoản</a>
+                  <a class="dropdown-item" href="#" (click)="LogOut()">Đăng Xuất</a>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-    </footer>
+      </nav>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row">
+      <!-- list product -->
+      <article class="col-sm-12 col-lg-12 col-xl-8">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6 col-xs-12 col-lg-4 col-sm-6"
+              *ngFor="let item of subjectInterface | paginate: { itemsPerPage: 3, currentPage: Page }">
+              <a [attr.sub]="[item.Id]" class="product__link" (click)="getQuizByProduct($event)">
+                <div class="container__product">
+                  <img src="../../assets/image/logos/{{item.Logo}}" alt="" class="product__img">
+                  <span class="product__price">{{item.Name}}</span>
+                </div>
+              </a>
+            </div>
+
+          </div>
+        </div>
+      </article>
+
+      <!-- menu right -->
+      <aside class="col-md-12 col-sm-12 col-lg-12 col-xl-4">
+        <div class="card">
+          <div class="card-body">
+            <ul class="list-group" #list_group>
+              <li class="list-group-item disabled">
+                <i class="fas fa-list"></i>
+                Danh Sách Môn Học
+              </li>
+              <li *ngFor="let list of subjectInterface" (click)="listSubject($event)" class="list-group-item"
+                [attr.sub]="[list.Id]">{{list.Name}}</li>
+            </ul>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </div>
+  <pagination-controls (pageChange)="onClickPage($event)"></pagination-controls>
+  <span class="page__current"></span>
+  <!-- footer -->
+  <footer class="w-100 py-4 flex-shrink-0">
+    <div class="container py-4">
+      <div class="row gy-4 gx-5">
+        <div class="col-lg-4 col-md-6">
+          <h5 class="h1 text-white">FB.</h5>
+          <p class="small text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+            eiusmod tempor incididunt.</p>
+          <p class="small text-muted mb-0">&copy; Copyrights. All rights reserved. <a class="text-primary"
+              href="#">Bootstrapious.com</a></p>
+        </div>
+        <div class="col-lg-2 col-md-6">
+          <h5 class="text-white mb-3">Quick links</h5>
+          <ul class="list-unstyled text-muted">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Get started</a></li>
+            <li><a href="#">FAQ</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-2 col-md-6">
+          <h5 class="text-white mb-3">Quick links</h5>
+          <ul class="list-unstyled text-muted">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Get started</a></li>
+            <li><a href="#">FAQ</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-4 col-md-6">
+          <h5 class="text-white mb-3">Newsletter</h5>
+          <p class="small text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+            eiusmod tempor incididunt.</p>
+        </div>
+      </div>
+    </div>
+  </footer>
 </div>
 <!-- Modal quiz -->
 <div class="modal-quiz" #modal>
-    <div class="modal-quiz-body">
-        <div class="info_box" #info_box>
-            <div class="info-title"><span>Some Rules of this Quiz</span></div>
-            <div class="info-list">
-                <div class="info">1. You will have only <span>15 seconds</span> per each question.</div>
-                <div class="info">2. Once you select your answer, it can't be undone.</div>
-                <div class="info">3. You can't select any option once time goes off.</div>
-                <div class="info">4. You can't exit from the Quiz while you're playing.</div>
-                <div class="info">5. You'll get points on the basis of your correct answers.</div>
-            </div>
-            <div class="buttons">
-                <button (click)="clickQuit($event)" class="quit">Exit Quiz</button>
-                <button class="restart" (click)="continueBtn($event)">Continue</button>
-            </div>
-        </div>
-        <div class="quiz_box" #quiz_box>
-            <header>
-                <div class="title subject__title" #subject_title>Awesome Quiz Application</div>
-                <div class="timer">
-                    <div class="time_left_txt" #timeText>Time Left</div>
-                    <div class="timer_sec" #timeCount>15</div>
-                </div>
-                <div class="time_line" #time_line></div>
-            </header>
-            <section>
-                <div class="que_text">
-                    <!-- Here I've inserted question from JavaScript -->
-                    <span>{{currentIndex+1}}.{{quizInterface[posCurQui]?.Text}}</span>
-                </div>
-                <div class="option_list" #option_list>
-                    <!-- Here I've inserted options from JavaScript -->
-                    <div class="option" *ngFor="let i of quizInterface[posCurQui]?.Answers"
-                        (click)="selectAnswer(i.Id, $event.target)">
-                        <span [attr.answeri]="[i.Id]" style="-webkit-user-modify: read-only; user-select: none;"
-                            display="block">{{i.Text}}</span>
-                    </div>
-
-                </div>
-            </section>
-            <!-- footer of Quiz Box -->
-            <footer class="footer">
-                <div class="total_que">
-                    <!-- Here I've inserted Question Count Number from JavaScript -->
-                    <span>
-                        <p>{{currentIndex+1}}</p> Of <p>{{quizInterface.length}} </p>Question
-                    </span>
-                </div>
-                <button class="next_btn" (click)="nextQuiz()" #next_btn>Next Que</button>
-            </footer>
-        </div>
-        <!-- Result Box -->
-        <div class="result_box" #result_box>
-            <div class="icon">
-                <i class="fas fa-crown"></i>
-            </div>
-            <div class="complete_text">You've completed the Quiz!</div>
-            <div class="score_text" #score_text>
-                <!-- Here I've inserted Score Result from JavaScript -->
-            </div>
-            <div class="buttons">
-                <button class="restart">Replay Quiz</button>
-                <button class="quit" (click)="complete_quiz()">Quit Quiz</button>
-            </div>
-        </div>
+  <div class="modal-quiz-body">
+    <div class="info_box" #info_box>
+      <div class="info-title"><span>Some Rules of this Quiz</span></div>
+      <div class="info-list">
+        <div class="info">1. You will have only <span>30 seconds</span> per each question.</div>
+        <div class="info">2. Once you select your answer, it can't be undone.</div>
+        <div class="info">3. You can't select any option once time goes off.</div>
+        <div class="info">4. You can't exit from the Quiz while you're playing.</div>
+        <div class="info">5. You'll get points on the basis of your correct answers.</div>
+      </div>
+      <div class="buttons">
+        <button (click)="clickQuit($event)" class="quit">Exit Quiz</button>
+        <button class="restart" (click)="continueBtn($event)">Continue</button>
+      </div>
     </div>
+    <div class="quiz_box" #quiz_box>
+      <header>
+        <div class="title subject__title" #subject_title>Awesome Quiz Application</div>
+        <div class="timer">
+          <div class="time_left_txt" #timeText>Time Left</div>
+          <div class="timer_sec" #timeCount>30</div>
+        </div>
+        <div class="time_line" #time_line></div>
+      </header>
+      <section>
+        <div class="que_text">
+          <!-- Here I've inserted question from JavaScript -->
+          <span>{{currentIndex+1}}.{{quizInterface[posCurQui]?.Text}}</span>
+        </div>
+        <div class="option_list" #option_list>
+          <!-- Here I've inserted options from JavaScript -->
+          <div class="option" *ngFor="let i of quizInterface[posCurQui]?.Answers"
+            (click)="selectAnswer(i.Id, $event.target)">
+            <span [attr.answeri]="[i.Id]" style="-webkit-user-modify: read-only; user-select: none;"
+              display="block">{{i.Text}}</span>
+          </div>
+
+        </div>
+      </section>
+      <!-- footer of Quiz Box -->
+      <footer class="footer">
+        <div class="total_que">
+          <!-- Here I've inserted Question Count Number from JavaScript -->
+          <span>
+            <!-- <p>{{currentIndex+1}}</p> Of <p>{{quizInterface.length}} </p>Question -->
+            <p>{{currentIndex+1}}</p> Of 10 Question
+          </span>
+        </div>
+        <button class="next_btn" (click)="nextQuiz()" #next_btn>Next Que</button>
+      </footer>
+    </div>
+    <!-- Result Box -->
+    <div class="result_box" #result_box>
+      <div class="icon">
+        <i class="fas fa-crown"></i>
+      </div>
+      <div class="complete_text">You've completed the Quiz!</div>
+      <div class="score_text" #score_text>
+        <!-- Here I've inserted Score Result from JavaScript -->
+      </div>
+      <div class="buttons">
+        <button class="restart">Replay Quiz</button>
+        <button class="quit" (click)="complete_quiz()">Quit Quiz</button>
+      </div>
+    </div>
+  </div>
 </div>

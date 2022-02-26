@@ -32,38 +32,39 @@
             </form>
 
             <!-- Registration -->
-            <form [formGroup]="valiForm" class="Login__sign-up--form" (ngSubmit)="onSignUp()">
+            <form [formGroup]="signUpForm" class="Login__sign-up--form" (ngSubmit)="onSignUp()">
                 <h2 class="Login__title">Đăng Ký</h2>
+                <!-- <div class="over"> -->
                 <div class="Login__input-field">
                     <i class="fas fa-user"></i>
-                    <input type="text" placeholder="Tài Khoản" name="username" formControlName="username">
+                    <input type="text" placeholder="Tài Khoản" name="username" (blur)="valiRequestFocus($event)" formControlName="username">
                 </div>
-                <span *ngIf="valid('username').invalid && valid('username').touched"
+                <span *ngIf="valid('username')?.invalid && (valid('username').touched || valid('username').dirty)"
                     class="form__message">{{getMessageUsername()}}</span>
 
                 <div class="Login__input-field">
                     <i class="fas fa-envelope"></i>
-                    <input type="email" placeholder="Email" name="email" formControlName="email">
+                    <input type="email" placeholder="Email" name="email" (blur)="valiRequestFocus($event)" formControlName="email">
                 </div>
-                <span *ngIf="valid('email').invalid && valid('email').touched"
+                <span *ngIf="valid('email')?.invalid && (valid('email').touched || valid('email').dirty)"
                     class="form__message">{{getMessageEmail()}}</span>
 
                 <div class="Login__input-field">
                     <i class="fas fa-user-graduate"></i>
-                    <input type="text" placeholder="Họ Tên" name="fullname" formControlName="fullname">
+                    <input type="text" placeholder="Họ Tên" name="fullname" (blur)="valiRequestFocus($event)" formControlName="fullname">
                 </div>
-                <span *ngIf="valid('fullname').invalid && valid('fullname').touched"
+                <span *ngIf="valid('fullname')?.invalid && (valid('fullname').touched || valid('fullname').dirty)"
                     class="form__message">{{getMessageFullName()}}</span>
 
                 <div class="Login__input-field">
                     <i class="fas fa-lock"></i>
-                    <input type="password" class="show-pass signup" name="password" autocomplete="on"
+                    <input type="password" class="show-pass signup" name="password" (blur)="valiRequestFocus($event)" autocomplete="on"
                         placeholder="Mật Khẩu" formControlName="password">
                     <span class="show-btn show-s"><i class="fas fa-eye"></i></span>
                 </div>
-                <span *ngIf="valid('password').invalid && valid('password').touched"
+                <span *ngIf="valid('password')?.invalid && (valid('password').touched || valid('password').dirty)"
                     class="form__message">{{getMessagePassword()}}</span>
-
+                <!-- </div> -->
                 <button type="submit" class="btn Login__btn-solid">Đăng Ký</button>
                 <p class="Login__social-text">Hoặc Đăng nhập bằng tài khoản</p>
                 <div class="Login__social-media">

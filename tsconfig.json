@@ -10,6 +10,8 @@
     "noPropertyAccessFromIndexSignature": true,
     "noImplicitReturns": true,
     "noFallthroughCasesInSwitch": true,
+    "strictPropertyInitialization": false, // tắt cảnh báo dữ liệu
+    "strictNullChecks": false, // tránh lỗi Object is possibly 'null'
     "sourceMap": true,
     "declaration": false,
     "downlevelIteration": true,
@@ -28,6 +30,5 @@
     "strictInjectionParameters": true,
     "strictInputAccessModifiers": true,
     "strictTemplates": true,
-    "strictPropertyInitialization": false, // tắt cảnh báo dữ liệu
   }
 }

@@ -18,7 +18,6 @@ import { NotFoundComponent } from './not-found/not-found.component';
     AccountComponent,
     HomeComponent,
     NotFoundComponent,
-
   ],
   imports: [
     BrowserModule,
