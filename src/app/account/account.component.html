@@ -1,7 +1,7 @@
 <div class="Login__container" #Login_container>
     <div class="Login__forms-container">
         <div class="Login__signin-signup">
-            <form action="" class="Login__sign-in--form" [formGroup]="LoginForm" (ngSubmit)="onLogin()">
+            <form class="Login__sign-in--form" [formGroup]="LoginForm" (ngSubmit)="onLogin()">
                 <h2 class="Login__title">Đăng Nhập</h2>
                 <div class="Login__input-field">
                     <i class="fas fa-user"></i>
@@ -65,7 +65,7 @@
                 <span *ngIf="valid('password')?.invalid && (valid('password').touched || valid('password').dirty)"
                     class="form__message">{{getMessagePassword()}}</span>
                 <!-- </div> -->
-                <button type="submit" class="btn Login__btn-solid">Đăng Ký</button>
+                <button type="submit" [disabled]="signUpForm.invalid" class="btn Login__btn-solid">Đăng Ký</button>
                 <p class="Login__social-text">Hoặc Đăng nhập bằng tài khoản</p>
                 <div class="Login__social-media">
                     <a href="" class="Login__social-icon">

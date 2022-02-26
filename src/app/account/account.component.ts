@@ -8,6 +8,7 @@ import {
 import { Router } from '@angular/router';
 import { AccountInterface } from '../interface/account.interface';
 import { AuthService } from '../service/auth/auth.service';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-account',
@@ -189,16 +190,24 @@ export class AccountComponent implements OnInit {
       this.LoginForm.value.username === '' &&
       this.LoginForm.value.password == ''
     ) {
-      alert('Please enter username and password');
+      Swal.fire({
+        text: 'Please enter username and password',
+        icon: 'error',
+        timer: 1600,
+        confirmButtonColor: '#487eb0',
+      });
     } else if (
       this.LoginForm.value.username === '' ||
       this.LoginForm.value.password === ''
     ) {
-      alert(
-        `Please enter ${
+      Swal.fire({
+        text: `Please enter ${
           this.LoginForm.value.username === '' ? 'username' : 'password'
-        }`
-      );
+        }`,
+        icon: 'error',
+        timer: 1600,
+        confirmButtonColor: '#487eb0',
+      });
     } else {
       this.authService.getAccountJson().subscribe((res) => {
         const user = res.find((user: any) => {
@@ -208,11 +217,24 @@ export class AccountComponent implements OnInit {
           );
         });
         if (user) {
-          alert('Login successfully');
-          this.authService.setToken('abcdefghijklmnopqrstuvwxyz');
-          this.router.navigate(['home', 1]);
+          Swal.fire({
+            titleText: 'Login successfully',
+            icon: 'success',
+            timer: 1600,
+            showConfirmButton: false,
+          }).then(() => {
+            this.authService.setToken('abcdefghijklmnopqrstuvwxyz');
+            this.router.navigate(['home', 1]);
+          });
+          setTimeout(() => {
+            this.authService.logout();
+          }, 2 * 60 * 1000);
         } else {
-          alert('Username or password incorrect');
+          Swal.fire({
+            titleText: 'Username or password incorrect',
+            icon: 'error',
+            timer: 1600,
+          });
         }
       });
     }
@@ -226,18 +248,37 @@ export class AccountComponent implements OnInit {
           return u.username === this.signUpForm.value.username;
         });
         if (user) {
-          alert('Username already exists');
+          Swal.fire({
+            title: 'Signup!',
+            text: 'Username already exists',
+            icon: 'error',
+            timer: 1600,
+            confirmButtonColor: '#487eb0',
+          });
         } else {
           this.authService.AddAccount(this.signUpForm.value).subscribe(
             (res) => {
-              alert('Sign Up Successfully');
               this.signUpForm.reset();
-              this.Login_container.nativeElement.classList.remove(
-                'sign-up-mode'
+              Swal.fire({
+                title: 'Signup!',
+                text: 'Username already exists',
+                icon: 'success',
+                timer: 1600,
+                showConfirmButton: false,
+              }).then(() =>
+                this.Login_container.nativeElement.classList.remove(
+                  'sign-up-mode'
+                )
               );
             },
             (err) => {
-              alert('Sign Up Error');
+              Swal.fire({
+                title: 'Signup!',
+                text: 'Username already exists',
+                icon: 'error',
+                timer: 1600,
+                confirmButtonColor: '#487eb0',
+              });
             }
           );
         }
